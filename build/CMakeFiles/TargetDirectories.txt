@@ -1,0 +1,3 @@
+/Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/build/CMakeFiles/CacheSimulator.dir
+/Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/build/CMakeFiles/edit_cache.dir
+/Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/build/CMakeFiles/rebuild_cache.dir

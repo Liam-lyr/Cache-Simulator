@@ -51,56 +51,63 @@ enum WritePolicy
 
 /** Properties for this cache **/
 /** get from command line**/
-extern unsigned int long i_cache_size;      // entire cache size (KB)
-extern unsigned int long i_cache_line_size; // cache line size (byte)
-extern unsigned int long i_cache_set_num;   // number of sets
-extern unsigned int long i_cache_line_num;  // number of cache lines
-extern Associativity t_assoc;               // associativity type
-extern ReplacementPolicy t_replace;         // replacement policy type
-extern WritePolicy t_write;                 // write policy type
+class CacheProperties
+{
+protected:
+    unsigned int long i_cache_size;      // entire cache size (KB)
+    unsigned int long i_cache_line_size; // cache line size (byte)
+    unsigned int long i_cache_set_num;   // number of sets
+    unsigned int long i_cache_line_num;  // number of cache lines
+    Associativity t_assoc;               // associativity type
+    ReplacementPolicy t_replace;         // replacement policy type
+    WritePolicy t_write;                 // write policy type
 
-/** Properties for this cache **/
-/** will be calculated **/
-extern unsigned short bit_cache_line_size;  // cache line size (bit)
-extern unsigned short bit_cache_block_size; // cache block size (bit)
-extern unsigned short bit_cache_set_num;    // number of sets (bit)
-extern unsigned short bit_cache_tag;        // tag (bit)
+    /** Properties for this cache **/
+    /** will be calculated **/
+    unsigned short bit_cache_line_size;  // cache line size (bit)
+    unsigned short bit_cache_block_size; // cache block size (bit)
+    unsigned short bit_cache_set_num;    // number of sets (bit)
+    unsigned short bit_cache_tag;        // tag (bit)
+
+protected:
+    void printCacheProperties();
+};
 
 //////////////////
 
-/** Properties of analizer **/
-extern unsigned long i_num_cache_access; // total cache access count
-extern unsigned long i_num_cache_load;   // total cahce load count
-extern unsigned long i_num_cache_store;  // total cache store count
+/** Properties of analyzer **/
+class AnalyzerProperties
+{
+protected:
+    unsigned long i_num_cache_access; // total cache access count
+    unsigned long i_num_cache_load;   // total cahce load count
+    unsigned long i_num_cache_store;  // total cache store count
 
-extern unsigned long i_num_cache_hit;       // total cache hit count
-extern unsigned long i_num_cache_load_hit;  // total cache load hit count
-extern unsigned long i_num_cache_store_hit; // total cache store hit count
+    unsigned long i_num_cache_hit;       // total cache hit count
+    unsigned long i_num_cache_load_hit;  // total cache load hit count
+    unsigned long i_num_cache_store_hit; // total cache store hit count
 
-extern double d_ave_rate;   // average cache hit rate
-extern double d_load_rate;  // average cache load hit rate
-extern double d_store_rate; // average cache store hit rate
+    double d_ave_rate;   // average cache hit rate
+    double d_load_rate;  // average cache load hit rate
+    double d_store_rate; // average cache store hit rate
+
+protected:
+    unsigned long current_access_line; // current access line
+    unsigned long current_access_set;  // current access set
+
+protected:
+    void printAnalyzerProperties();
+};
 
 //////////////////
 
 /** Cache body **/
-extern std::bitset<64> cacheBody[MAX_CACHE_LINE_NUM];  // cache body (declaration)
-extern unsigned long LRU_priority[MAX_CACHE_LINE_NUM]; // LRU priority for each line (mod in a set) (declaration)
-extern unsigned long current_access_line;              // current access line
-extern unsigned long current_access_set;               // current access set
-
-//////////////////
-
-/** File reading properties **/
-extern std::string s_conf_direction;   // configuration file direction
-extern std::string s_trace_direction;  // trace file direction
-extern std::string s_output_direction; // output file direction
-
-//////////////////
-
-/** FUnctions registration **/
-void Initialize();
-void PrintProperties();
+class CacheBody
+{
+protected:
+    std::bitset<64> *cacheBody;  // cache body
+    unsigned long *LRU_priority; // LRU priority for each line (mod in a set)
+};
 
 //////////////////
 
@@ -109,7 +116,7 @@ void PrintProperties();
 class InputUtilities
 {
 public:
-    void GetInput(int argc, char *argv[]);
+    void getInput(int argc, char *argv[]);
 
 private:
     void getCacheLineSize();
@@ -118,6 +125,28 @@ private:
     void getLineCountEachSet();
     void getReplacePolicy();
     void getWritePolicy();
+
+protected:
+    /** File reading properties **/
+    std::string s_config_dir;   // configuration file direction
+    std::string s_trace_dir;  // trace file direction
+    std::string s_output_dir; // output file direction
+public:
+    void printInputProperties();
+};
+
+//////////////////
+
+/** Entire cache **/
+class Cache : public CacheProperties, public AnalyzerProperties, public CacheBody
+{
+    friend class InputUtilities; // InputUtilities should be able to access cache
+
+public:
+    Cache();
+    ~Cache();
+    void printCacheInfo();
+    void printCacheBody();
 };
 
 #endif // _BASE
