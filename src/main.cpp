@@ -11,10 +11,11 @@ int main(int argc, char *argv[])
     InputUtilities inputUtil;
 
     cache.printCacheInfo();
-    inputUtil.getInput(argc, argv);
+    inputUtil.setCacheProperties(argc, argv, cache);
 
     inputUtil.printInputProperties();
     cache.printCacheInfo();
+
 
     return 0;
 }
