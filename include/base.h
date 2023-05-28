@@ -25,6 +25,8 @@
 #define MAX_CACHE_LINE_SIZE ULONG_MAX
 #endif
 
+#define ADDRESS_WIDTH 48
+
 //////////////////
 
 #ifndef STRUCT_TYPE
@@ -60,7 +62,7 @@ class CacheProperties
 {
 protected:
     unsigned long i_cache_size;         // entire cache size (KB)
-    unsigned long i_cache_line_size;    // cache line size (byte)
+    unsigned long i_cache_line_size;    // cache line size (byte) (i.e. block size. ignore flags)
     unsigned long i_cache_set_line_num; // number of lines in each set
     unsigned long i_cache_set_num;      // number of sets
     unsigned long i_cache_line_num;     // number of cache lines
@@ -71,10 +73,10 @@ protected:
 
     /** Properties for this cache **/
     /** will be calculated **/
-    unsigned short bit_cache_line_size;  // cache line size (bit)
-    unsigned short bit_cache_block_size; // b in address (bit)
-    unsigned short bit_cache_set_num;    // number of sets (bit)
-    unsigned short bit_cache_tag;        // tag (bit)
+    unsigned short bit_cache_line_offset_width; // bits for line size in address (bit)
+    unsigned short bit_block_offset_width;      // bits for block size in address (bit)
+    unsigned short bit_cache_set_offset_width;  // bits for set size in address (bit)
+    unsigned short bit_cache_tag_width;         // bits for tag size in address (bit)
 
 protected:
     void printCacheProperties() const;
@@ -137,7 +139,7 @@ private:
     void setReplacePolicy(Cache &, std::ifstream &) const;
     void setWritePolicy(Cache &, std::ifstream &) const;
     void setMissPenalty(Cache &, std::ifstream &) const;
-    void readInput(int argc, char *argv[], Cache &cache);
+    void readConfig(int argc, char *argv[], Cache &cache);
 
 protected:
     /** File reading properties **/
@@ -160,6 +162,9 @@ public:
     ~Cache();
     void printCacheInfo() const;
     void printCacheBody() const;
+
+public:
+    void cacheBuildUp();
 };
 
 #endif // _BASE

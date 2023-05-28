@@ -123,7 +123,7 @@ void InputUtilities::setWritePolicy(Cache &cache, ifstream &configFile) const
     }
 }
 
-void InputUtilities::readInput(int argc, char *argv[], Cache &cache)
+void InputUtilities::readConfig(int argc, char *argv[], Cache &cache)
 {
     // read from command line
     int opt;
@@ -193,19 +193,53 @@ void InputUtilities::readInput(int argc, char *argv[], Cache &cache)
 
 void InputUtilities::setCacheProperties(int argc, char *argv[], Cache &cache)
 {
-    readInput(argc, argv, cache);
+    readConfig(argc, argv, cache);
 
+    // set cache line number
     assert(cache.i_cache_line_size != 0);
     cache.i_cache_line_num = (cache.i_cache_size << 10) / cache.i_cache_line_size;
 
-    unsigned long temp = cache.i_cache_line_num;
+    // set bit width for cache block size in adddress
+    unsigned long temp = cache.i_cache_line_size;
     while (temp)
     {
-        cache.bit_cache_block_size++; // cuz input line size dosen't include flags
+        cache.bit_block_offset_width++; // cuz input line size dosen't include flags
         temp >>= 1;
     }
+    cache.bit_block_offset_width--;
 
-    cache.bit_cache_block_size--;
+    if (cache.t_assoc == DIRECT_MAPPED)
+    {
+        // tag + line_offset + block_offset
+        temp = cache.i_cache_line_num;
+        while (temp)
+        {
+            cache.bit_cache_line_offset_width++;
+            temp >>= 1;
+        }
+        cache.bit_cache_line_offset_width--;
+        cache.bit_cache_set_offset_width = 0;
+    }
+    else if (cache.t_assoc == FULLY_ASSOCIATIVE)
+    {
+        // tag + block_offset
+        cache.bit_cache_set_offset_width = 0;
+        cache.bit_cache_line_offset_width = 0;
+    }
+    else if (cache.t_assoc == SET_ASSOCIATIVE)
+    {
+        // tag + set_offset + block_offset
+        assert(cache.i_cache_set_line_num != 0);
+        cache.i_cache_set_num = cache.i_cache_line_num / cache.i_cache_set_line_num;
+        temp = cache.i_cache_set_num;
+        while (temp)
+        {
+            cache.bit_cache_set_offset_width++;
+            temp >>= 1;
+        }
+        cache.bit_cache_set_offset_width--;
+        cache.bit_cache_line_offset_width = 0;
+    }
 
-    
+    cache.bit_cache_tag_width = ADDRESS_WIDTH - cache.bit_cache_set_offset_width - cache.bit_cache_line_offset_width - cache.bit_block_offset_width;
 }

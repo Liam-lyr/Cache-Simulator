@@ -34,16 +34,16 @@ inline string CacheProperties::writeTranslate(unsigned int write) const
     switch (write)
     {
     case 0:
-        return "Write through";
+        return "Write through & Not write allocate";
     default:
-        return "Write back";
+        return "Write back & Write allocate";
     }
 }
 
 void CacheProperties::printCacheProperties() const
 {
     cout << "Cache size: " << i_cache_size << " KB" << endl;
-    cout << "Cache line size: " << i_cache_line_size << " B" << endl;
+    cout << "Cache line size: " << i_cache_line_size << " B (i.e. block size. ignore flags)" << endl;
     cout << "Cache line number of each set: " << i_cache_set_line_num << endl;
     cout << "Cache set number: " << i_cache_set_num << endl;
     cout << "Cache line number: " << i_cache_line_num << endl;
@@ -54,10 +54,10 @@ void CacheProperties::printCacheProperties() const
 
     cout << "Miss penalty: " << i_miss_penalty << endl;
 
-    cout << "Cache line size in bits: " << bit_cache_line_size << endl;
-    cout << "Cache block size in bits: " << bit_cache_block_size << endl;
-    cout << "Cache set number in bits: " << bit_cache_set_num << endl;
-    cout << "Cache tag in bits: " << bit_cache_tag << endl;
+    cout << "Bits for line size in address: " << bit_cache_line_offset_width << " bit" << endl;
+    cout << "Bits for block size in address: " << bit_block_offset_width << " bit" << endl;
+    cout << "Bits for set size in address: " << bit_cache_set_offset_width << " bit" << endl;
+    cout << "Bits for tag size in address: " << bit_cache_tag_width << " bit" << endl;
 }
 
 void AnalyzerProperties::printAnalyzerProperties() const
@@ -99,10 +99,10 @@ Cache::Cache()
 
     i_miss_penalty = 0;
 
-    bit_cache_line_size = 0;
-    bit_cache_block_size = 0;
-    bit_cache_set_num = 0;
-    bit_cache_tag = 0;
+    bit_cache_line_offset_width = 0;
+    bit_block_offset_width = 0;
+    bit_cache_set_offset_width = 0;
+    bit_cache_tag_width = 0;
 
     i_num_cache_access = 0;
     i_num_cache_load = 0;
