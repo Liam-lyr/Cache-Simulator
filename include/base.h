@@ -108,7 +108,7 @@ protected:
 class CacheBody
 {
 protected:
-    std::bitset<32> *cacheBody;  // cache body, a line will be divided into multiple cache items, each 1 byte
+    std::bitset<64> *cacheBody;  // cache body, a line will be divided into multiple cache items, each 1 byte
     unsigned long *LRU_priority; // LRU priority for each line (mod in a set)
 };
 

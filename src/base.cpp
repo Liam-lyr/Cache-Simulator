@@ -120,7 +120,7 @@ Cache::Cache()
     d_load_rate = 0;
     d_store_rate = 0;
 
-    cacheBody = new bitset<32>[MAX_CACHE_LINE_NUM]
+    cacheBody = new bitset<64>[MAX_CACHE_LINE_NUM]
     { 0 };
     LRU_priority = new unsigned long[MAX_CACHE_LINE_NUM]{0};
 
