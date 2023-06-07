@@ -80,12 +80,6 @@ void AnalyzerProperties::printAnalyzerProperties() const
     cout << "Current access set: " << current_access_set << endl;
 }
 
-void CacheBody::printCacheBodyProperties() const
-{
-    cout << i_item_per_line << " cache items (bytes) will be used to store a cache line, including flags" << endl;
-    cout << i_item_total_used << " cache items (bytes) are used to store all cache data, including flags" << endl;
-}
-
 void InputUtilities::printInputProperties() const
 {
     cout << "Configuration file direction: " << s_config_dir << endl;
@@ -126,7 +120,7 @@ Cache::Cache()
     d_load_rate = 0;
     d_store_rate = 0;
 
-    cacheBody = new bitset<8>[MAX_CACHE_LINE_NUM * MAX_BYTE_FOR_LINE]
+    cacheBody = new bitset<32>[MAX_CACHE_LINE_NUM]
     { 0 };
     LRU_priority = new unsigned long[MAX_CACHE_LINE_NUM]{0};
 
@@ -146,8 +140,6 @@ void Cache::printCacheInfo() const
          << "===================Cache Info==================" << endl;
 
     printCacheProperties();
-    cout << "===============================================" << endl;
-    printCacheBodyProperties();
     cout << "===============================================" << endl;
     printAnalyzerProperties();
     cout << "===============================================" << endl;

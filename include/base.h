@@ -13,7 +13,6 @@
 
 #define MAX_CACHE_LINE_NUM 65536  // 2^16
 #define MAX_CACHE_LINE_SIZE 65536 // 2^16
-#define MAX_BYTE_FOR_LINE 72      // max 70 byte for each cache line
 
 #define ADDRESS_WIDTH 48
 
@@ -109,13 +108,8 @@ protected:
 class CacheBody
 {
 protected:
-    std::bitset<8> *cacheBody;   // cache body, a line will be divided into multiple cache items, each 1 byte
+    std::bitset<32> *cacheBody;  // cache body, a line will be divided into multiple cache items, each 1 byte
     unsigned long *LRU_priority; // LRU priority for each line (mod in a set)
-protected:
-    unsigned long long i_item_total_used; // total item used for cache
-    unsigned long i_item_per_line;        // item per line
-protected:
-    void printCacheBodyProperties() const;
 };
 
 //////////////////
@@ -162,6 +156,9 @@ public:
 
 public:
     void cacheBuildUp();
+
+private:
+    inline void clearCacheBody();
 };
 
 #endif // _BASE

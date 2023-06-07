@@ -267,14 +267,5 @@ void InputUtilities::setCacheProperties(int argc, char *argv[], Cache &cache)
     }
 
     // set cache line size (in byte), round to upper bound
-    // i.e. number of cache items for a single cache line
     cache.i_cache_line_size = cache.bit_cache_line_size / 8 + (cache.bit_cache_line_size % 8 == 0.0 ? 0 : 1);
-    if (cache.i_cache_line_size > MAX_BYTE_FOR_LINE)
-    {
-        cerr << "Cache line size too big! now " + to_string(cache.i_cache_line_size) + " bytes, max " + to_string(MAX_BYTE_FOR_LINE) + " bytes" << endl;
-        exit(1);
-    }
-
-    cache.i_item_per_line = cache.i_cache_line_size;
-    cache.i_item_total_used = cache.i_item_per_line * cache.i_cache_line_num;
 }
