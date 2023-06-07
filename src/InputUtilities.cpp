@@ -23,7 +23,7 @@ void InputUtilities::setCacheSize(Cache &cache, ifstream &configFile) const
     cache.i_cache_size = temp;
 }
 
-void InputUtilities::setCacheLineSize(Cache &cache, ifstream &configFile) const
+void InputUtilities::setCacheBlockSize(Cache &cache, ifstream &configFile) const
 {
     string line;
     unsigned long temp;
@@ -36,7 +36,7 @@ void InputUtilities::setCacheLineSize(Cache &cache, ifstream &configFile) const
         throw("Cache line size is not valid!");
     }
 
-    cache.i_cache_line_size = temp;
+    cache.i_cache_block_size = temp;
 }
 
 void InputUtilities::setAssociativity(Cache &cache, ifstream &configFile) const
@@ -162,9 +162,9 @@ void InputUtilities::readConfig(int argc, char *argv[], Cache &cache)
     }
     try
     {
-        setCacheLineSize(cache, configFile); // Byte
-        setAssociativity(cache, configFile); // 0 - FULLY_ASSOCIATIVE, 1 - DIRECT_MAPPED, 2 - SET_ASSOCIATIVE
-        setCacheSize(cache, configFile);     // KB
+        setCacheBlockSize(cache, configFile); // Byte
+        setAssociativity(cache, configFile);  // 0 - FULLY_ASSOCIATIVE, 1 - DIRECT_MAPPED, 2 - SET_ASSOCIATIVE
+        setCacheSize(cache, configFile);      // KB
 
         if (cache.t_assoc == DIRECT_MAPPED) // If the associativity_way is direct_mapped,the replacement polacy can be none only;
         {
@@ -204,26 +204,26 @@ void InputUtilities::setCacheProperties(int argc, char *argv[], Cache &cache)
     readConfig(argc, argv, cache);
 
     // set cache line number
-    assert(cache.i_cache_line_size != 0);
-    cache.i_cache_line_num = (cache.i_cache_size << 10) / cache.i_cache_line_size;
+    assert(cache.i_cache_block_size != 0);
+    cache.i_cache_line_num = (cache.i_cache_size << 10) / cache.i_cache_block_size;
 
     // set bit width for cache block size in adddress
-    unsigned long temp = cache.i_cache_line_size;
-    while (temp)
+    unsigned long temp1 = cache.i_cache_block_size;
+    while (temp1)
     {
         cache.bit_block_offset_width++; // cuz input line size dosen't include flags
-        temp >>= 1;
+        temp1 >>= 1;
     }
     cache.bit_block_offset_width--;
 
     if (cache.t_assoc == DIRECT_MAPPED)
     {
         // tag + line_offset + block_offset
-        temp = cache.i_cache_line_num;
-        while (temp)
+        temp1 = cache.i_cache_line_num;
+        while (temp1)
         {
             cache.bit_cache_line_offset_width++;
-            temp >>= 1;
+            temp1 >>= 1;
         }
         cache.bit_cache_line_offset_width--;
         cache.bit_cache_set_offset_width = 0;
@@ -239,15 +239,42 @@ void InputUtilities::setCacheProperties(int argc, char *argv[], Cache &cache)
         // tag + set_offset + block_offset
         assert(cache.i_cache_set_line_num != 0);
         cache.i_cache_set_num = cache.i_cache_line_num / cache.i_cache_set_line_num;
-        temp = cache.i_cache_set_num;
-        while (temp)
+        temp1 = cache.i_cache_set_num;
+        while (temp1)
         {
             cache.bit_cache_set_offset_width++;
-            temp >>= 1;
+            temp1 >>= 1;
         }
         cache.bit_cache_set_offset_width--;
         cache.bit_cache_line_offset_width = 0;
     }
 
     cache.bit_cache_tag_width = ADDRESS_WIDTH - cache.bit_cache_set_offset_width - cache.bit_cache_line_offset_width - cache.bit_block_offset_width;
+
+    // set cache line size (in bit)
+    unsigned long long temp2 = cache.i_cache_block_size * 8;
+    temp2 += cache.bit_cache_tag_width + 1; // 1 for valid bit
+
+    if (cache.t_write == WRITE_BACK)
+    {
+        // dirty bit required
+        cache.bit_cache_line_size = temp2 + 1;
+    }
+    else if (cache.t_write == WRITE_THROUGH)
+    {
+        // dirty bit not required
+        cache.bit_cache_line_size = temp2;
+    }
+
+    // set cache line size (in byte), round to upper bound
+    // i.e. number of cache items for a single cache line
+    cache.i_cache_line_size = cache.bit_cache_line_size / 8 + (cache.bit_cache_line_size % 8 == 0.0 ? 0 : 1);
+    if (cache.i_cache_line_size > MAX_BYTE_FOR_LINE)
+    {
+        cerr << "Cache line size too big! now " + to_string(cache.i_cache_line_size) + " bytes, max " + to_string(MAX_BYTE_FOR_LINE) + " bytes" << endl;
+        exit(1);
+    }
+
+    cache.i_item_per_line = cache.i_cache_line_size;
+    cache.i_item_total_used = cache.i_item_per_line * cache.i_cache_line_num;
 }

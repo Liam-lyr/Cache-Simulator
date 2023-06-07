@@ -4,3 +4,7 @@
 
 using namespace std;
 
+void Cache::cacheBuildUp()
+{
+    
+}

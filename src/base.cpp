@@ -43,7 +43,8 @@ inline string CacheProperties::writeTranslate(unsigned int write) const
 void CacheProperties::printCacheProperties() const
 {
     cout << "Cache size: " << i_cache_size << " KB" << endl;
-    cout << "Cache line size: " << i_cache_line_size << " B (i.e. block size. ignore flags)" << endl;
+    cout << "Cache block size: " << i_cache_block_size << " B (i.e. line size ignoring flags)" << endl;
+    cout << "Cache line size: " << i_cache_line_size << " B (i.e. line size including flags)(round to upper bound)" << endl;
     cout << "Cache line number of each set: " << i_cache_set_line_num << endl;
     cout << "Cache set number: " << i_cache_set_num << endl;
     cout << "Cache line number: " << i_cache_line_num << endl;
@@ -58,6 +59,7 @@ void CacheProperties::printCacheProperties() const
     cout << "Bits for block size in address: " << bit_block_offset_width << " bit" << endl;
     cout << "Bits for set size in address: " << bit_cache_set_offset_width << " bit" << endl;
     cout << "Bits for tag size in address: " << bit_cache_tag_width << " bit" << endl;
+    cout << "Cache line size: " << bit_cache_line_size << " bit (i.e. line size including flags)" << endl;
 }
 
 void AnalyzerProperties::printAnalyzerProperties() const
@@ -78,6 +80,12 @@ void AnalyzerProperties::printAnalyzerProperties() const
     cout << "Current access set: " << current_access_set << endl;
 }
 
+void CacheBody::printCacheBodyProperties() const
+{
+    cout << i_item_per_line << " cache items (bytes) will be used to store a cache line, including flags" << endl;
+    cout << i_item_total_used << " cache items (bytes) are used to store all cache data, including flags" << endl;
+}
+
 void InputUtilities::printInputProperties() const
 {
     cout << "Configuration file direction: " << s_config_dir << endl;
@@ -88,6 +96,7 @@ void InputUtilities::printInputProperties() const
 Cache::Cache()
 {
     i_cache_size = 0;
+    i_cache_block_size = 0;
     i_cache_line_size = 0;
     i_cache_set_line_num = 0;
     i_cache_set_num = 0;
@@ -103,6 +112,7 @@ Cache::Cache()
     bit_block_offset_width = 0;
     bit_cache_set_offset_width = 0;
     bit_cache_tag_width = 0;
+    bit_cache_line_size = 0;
 
     i_num_cache_access = 0;
     i_num_cache_load = 0;
@@ -116,7 +126,7 @@ Cache::Cache()
     d_load_rate = 0;
     d_store_rate = 0;
 
-    cacheBody = new bitset<64>[MAX_CACHE_LINE_NUM]
+    cacheBody = new bitset<8>[MAX_CACHE_LINE_NUM * MAX_BYTE_FOR_LINE]
     { 0 };
     LRU_priority = new unsigned long[MAX_CACHE_LINE_NUM]{0};
 
@@ -136,6 +146,8 @@ void Cache::printCacheInfo() const
          << "===================Cache Info==================" << endl;
 
     printCacheProperties();
+    cout << "===============================================" << endl;
+    printCacheBodyProperties();
     cout << "===============================================" << endl;
     printAnalyzerProperties();
     cout << "===============================================" << endl;

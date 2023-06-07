@@ -3,10 +3,6 @@
 
 //////////////////
 
-#define QUICK_MODE
-
-//////////////////
-
 #include <iostream>
 #include <bitset>
 #include <string>
@@ -15,15 +11,9 @@
 
 //////////////////
 
-#ifdef QUICK_MODE
-#define MAX_CACHE_LINE_NUM 65536   // 2^16
-#define MAX_CACHE_LINE_SIZE 262144 // 2^18
-#endif
-
-#ifndef QUICK_MODE
-#define MAX_CACHE_LINE_NUM 268435456 // max array size gcc supports (2^28)
-#define MAX_CACHE_LINE_SIZE ULONG_MAX
-#endif
+#define MAX_CACHE_LINE_NUM 65536  // 2^16
+#define MAX_CACHE_LINE_SIZE 65536 // 2^16
+#define MAX_BYTE_FOR_LINE 72      // max 70 byte for each cache line
 
 #define ADDRESS_WIDTH 48
 
@@ -62,7 +52,8 @@ class CacheProperties
 {
 protected:
     unsigned long i_cache_size;         // entire cache size (KB)
-    unsigned long i_cache_line_size;    // cache line size (Byte) (i.e. block size. ignore flags)
+    unsigned long i_cache_block_size;   // cache block size (Byte) (i.e. line size but ignoring flags)
+    unsigned long i_cache_line_size;    // cache line size (Byte) (i.e. line size including flags, round to upper bound)
     unsigned long i_cache_set_line_num; // number of lines in each set (E)
     unsigned long i_cache_set_num;      // number of sets (S)
     unsigned long i_cache_line_num;     // number of cache lines (S * E)
@@ -77,6 +68,7 @@ protected:
     unsigned short bit_block_offset_width;      // bits for in-block size in address (bit) (b)
     unsigned short bit_cache_set_offset_width;  // bits for in-set offset in address (bit) (s)
     unsigned short bit_cache_tag_width;         // bits for tag in address (bit)
+    unsigned long long bit_cache_line_size;     // cache line size (bit) (i.e. line size including flags)
 
 protected:
     void printCacheProperties() const;
@@ -117,8 +109,13 @@ protected:
 class CacheBody
 {
 protected:
-    std::bitset<64> *cacheBody;  // cache body
+    std::bitset<8> *cacheBody;   // cache body, a line will be divided into multiple cache items, each 1 byte
     unsigned long *LRU_priority; // LRU priority for each line (mod in a set)
+protected:
+    unsigned long long i_item_total_used; // total item used for cache
+    unsigned long i_item_per_line;        // item per line
+protected:
+    void printCacheBodyProperties() const;
 };
 
 //////////////////
@@ -133,7 +130,7 @@ public:
     void setCacheProperties(int argc, char *argv[], Cache &cache);
 
 private:
-    void setCacheLineSize(Cache &, std::ifstream &) const;
+    void setCacheBlockSize(Cache &, std::ifstream &) const;
     void setCacheSize(Cache &, std::ifstream &) const;
     void setAssociativity(Cache &, std::ifstream &) const;
     void setReplacePolicy(Cache &, std::ifstream &) const;
