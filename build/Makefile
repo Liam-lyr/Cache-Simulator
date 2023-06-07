@@ -177,6 +177,30 @@ src/base.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheSimulator.dir/build.make CMakeFiles/CacheSimulator.dir/src/base.cpp.s
 .PHONY : src/base.cpp.s
 
+src/cacheBuildUp.o: src/cacheBuildUp.cpp.o
+.PHONY : src/cacheBuildUp.o
+
+# target to build an object file
+src/cacheBuildUp.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheSimulator.dir/build.make CMakeFiles/CacheSimulator.dir/src/cacheBuildUp.cpp.o
+.PHONY : src/cacheBuildUp.cpp.o
+
+src/cacheBuildUp.i: src/cacheBuildUp.cpp.i
+.PHONY : src/cacheBuildUp.i
+
+# target to preprocess a source file
+src/cacheBuildUp.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheSimulator.dir/build.make CMakeFiles/CacheSimulator.dir/src/cacheBuildUp.cpp.i
+.PHONY : src/cacheBuildUp.cpp.i
+
+src/cacheBuildUp.s: src/cacheBuildUp.cpp.s
+.PHONY : src/cacheBuildUp.s
+
+# target to generate assembly for a file
+src/cacheBuildUp.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheSimulator.dir/build.make CMakeFiles/CacheSimulator.dir/src/cacheBuildUp.cpp.s
+.PHONY : src/cacheBuildUp.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -216,6 +240,9 @@ help:
 	@echo "... src/base.o"
 	@echo "... src/base.i"
 	@echo "... src/base.s"
+	@echo "... src/cacheBuildUp.o"
+	@echo "... src/cacheBuildUp.i"
+	@echo "... src/cacheBuildUp.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

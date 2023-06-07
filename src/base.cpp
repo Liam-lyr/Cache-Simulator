@@ -34,9 +34,9 @@ inline string CacheProperties::writeTranslate(unsigned int write) const
     switch (write)
     {
     case 0:
-        return "Write through & Not write allocate";
-    default:
         return "Write back & Write allocate";
+    default:
+        return "Write through & Not write allocate";
     }
 }
 

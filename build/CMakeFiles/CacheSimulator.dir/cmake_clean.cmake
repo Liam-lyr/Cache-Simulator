@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/CacheSimulator.dir/src/InputUtilities.cpp.o.d"
   "CMakeFiles/CacheSimulator.dir/src/base.cpp.o"
   "CMakeFiles/CacheSimulator.dir/src/base.cpp.o.d"
+  "CMakeFiles/CacheSimulator.dir/src/cacheBuildUp.cpp.o"
+  "CMakeFiles/CacheSimulator.dir/src/cacheBuildUp.cpp.o.d"
   "CMakeFiles/CacheSimulator.dir/src/main.cpp.o"
   "CMakeFiles/CacheSimulator.dir/src/main.cpp.o.d"
   "CacheSimulator"

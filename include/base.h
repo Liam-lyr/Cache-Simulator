@@ -48,8 +48,8 @@ enum ReplacementPolicy
 // write policy
 enum WritePolicy
 {
-    WRITE_THROUGH, // hit - write through. miss - not write allocate
-    WRITE_BACK     // hit - write back.    miss - write allocate
+    WRITE_BACK,   // hit - write back.    miss - write allocate
+    WRITE_THROUGH // hit - write through. miss - not write allocate
 };
 
 #endif // STRUCT_TYPE
@@ -62,10 +62,10 @@ class CacheProperties
 {
 protected:
     unsigned long i_cache_size;         // entire cache size (KB)
-    unsigned long i_cache_line_size;    // cache line size (byte) (i.e. block size. ignore flags)
-    unsigned long i_cache_set_line_num; // number of lines in each set
-    unsigned long i_cache_set_num;      // number of sets
-    unsigned long i_cache_line_num;     // number of cache lines
+    unsigned long i_cache_line_size;    // cache line size (Byte) (i.e. block size. ignore flags)
+    unsigned long i_cache_set_line_num; // number of lines in each set (E)
+    unsigned long i_cache_set_num;      // number of sets (S)
+    unsigned long i_cache_line_num;     // number of cache lines (S * E)
     Associativity t_assoc;              // associativity type
     ReplacementPolicy t_replace;        // replacement policy type
     WritePolicy t_write;                // write policy type
@@ -73,10 +73,10 @@ protected:
 
     /** Properties for this cache **/
     /** will be calculated **/
-    unsigned short bit_cache_line_offset_width; // bits for line size in address (bit)
-    unsigned short bit_block_offset_width;      // bits for block size in address (bit)
-    unsigned short bit_cache_set_offset_width;  // bits for set size in address (bit)
-    unsigned short bit_cache_tag_width;         // bits for tag size in address (bit)
+    unsigned short bit_cache_line_offset_width; // bits for in-line offset in address (bit)
+    unsigned short bit_block_offset_width;      // bits for in-block size in address (bit) (b)
+    unsigned short bit_cache_set_offset_width;  // bits for in-set offset in address (bit) (s)
+    unsigned short bit_cache_tag_width;         // bits for tag in address (bit)
 
 protected:
     void printCacheProperties() const;

@@ -56,7 +56,7 @@ void InputUtilities::setAssociativity(Cache &cache, ifstream &configFile) const
         cache.t_assoc = DIRECT_MAPPED;
         break;
     default:
-        if (temp < 1 || temp >= MAX_CACHE_LINE_NUM || (temp & (~temp + 1)) != temp)
+        if (temp < 0 || temp >= MAX_CACHE_LINE_NUM || (temp & (~temp + 1)) != temp)
         {
             throw("Associativity is not valid!");
         }
@@ -113,12 +113,13 @@ void InputUtilities::setWritePolicy(Cache &cache, ifstream &configFile) const
     switch (temp)
     {
     case 0:
-        cache.t_write = WRITE_THROUGH;
-        break;
-    case 1:
         cache.t_write = WRITE_BACK;
         break;
+    case 1:
+        cache.t_write = WRITE_THROUGH;
+        break;
     default:
+        cout << temp << endl;
         throw("Write policy is not valid!");
     }
 }
@@ -167,7 +168,8 @@ void InputUtilities::readConfig(int argc, char *argv[], Cache &cache)
 
         if (cache.t_assoc == DIRECT_MAPPED) // If the associativity_way is direct_mapped,the replacement polacy can be none only;
         {
-            cache.t_replace = none;
+            setReplacePolicy(cache, configFile);
+            cache.t_replace = none; // direct_mapped, so no replacement policy
             setMissPenalty(cache, configFile);
             setWritePolicy(cache, configFile);
         }
@@ -181,6 +183,12 @@ void InputUtilities::readConfig(int argc, char *argv[], Cache &cache)
     catch (const exception &e)
     {
         std::cerr << e.what() << '\n';
+        // exit(1);
+    }
+    catch (const char *msg)
+    {
+        std::cerr << msg << '\n';
+        // exit(1);
     }
 
     configFile.close();

@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/src/InputUtilities.cpp" "CMakeFiles/CacheSimulator.dir/src/InputUtilities.cpp.o" "gcc" "CMakeFiles/CacheSimulator.dir/src/InputUtilities.cpp.o.d"
   "/Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/src/base.cpp" "CMakeFiles/CacheSimulator.dir/src/base.cpp.o" "gcc" "CMakeFiles/CacheSimulator.dir/src/base.cpp.o.d"
+  "/Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/src/cacheBuildUp.cpp" "CMakeFiles/CacheSimulator.dir/src/cacheBuildUp.cpp.o" "gcc" "CMakeFiles/CacheSimulator.dir/src/cacheBuildUp.cpp.o.d"
   "/Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/src/main.cpp" "CMakeFiles/CacheSimulator.dir/src/main.cpp.o" "gcc" "CMakeFiles/CacheSimulator.dir/src/main.cpp.o.d"
   )
 
