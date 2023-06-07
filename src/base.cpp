@@ -1,5 +1,7 @@
 #include <iostream>
-#include "base.h"
+
+#include "cacheUtils.h"
+#include "analyzerUtils.h"
 
 using namespace std;
 
@@ -62,24 +64,6 @@ void CacheProperties::printCacheProperties() const
     cout << "Cache line size: " << bit_cache_line_size << " bit (i.e. line size including flags)" << endl;
 }
 
-void AnalyzerProperties::printAnalyzerProperties() const
-{
-    cout << "Number of cache access: " << i_num_cache_access << endl;
-    cout << "Number of cache load: " << i_num_cache_load << endl;
-    cout << "Number of cache store: " << i_num_cache_store << endl;
-
-    cout << "Number of cache hit: " << i_num_cache_hit << endl;
-    cout << "Number of cache load hit: " << i_num_cache_load_hit << endl;
-    cout << "Number of cache store hit: " << i_num_cache_store_hit << endl;
-
-    cout << "Average cache hit rate: " << d_ave_rate << endl;
-    cout << "Average cache load hit rate: " << d_load_rate << endl;
-    cout << "Average cache store hit rate: " << d_store_rate << endl;
-
-    cout << "Current access line: " << current_access_line << endl;
-    cout << "Current access set: " << current_access_set << endl;
-}
-
 void InputUtilities::printInputProperties() const
 {
     cout << "Configuration file direction: " << s_config_dir << endl;
@@ -108,6 +92,19 @@ Cache::Cache()
     bit_cache_tag_width = 0;
     bit_cache_line_size = 0;
 
+    cacheBody = new bitset<64>[MAX_CACHE_LINE_NUM]
+    { 0 };
+    LRU_priority = new unsigned long[MAX_CACHE_LINE_NUM]{0};
+}
+
+Cache::~Cache()
+{
+    delete[] cacheBody;
+    delete[] LRU_priority;
+}
+
+Analyzer::Analyzer()
+{
     i_num_cache_access = 0;
     i_num_cache_load = 0;
     i_num_cache_store = 0;
@@ -120,18 +117,26 @@ Cache::Cache()
     d_load_rate = 0;
     d_store_rate = 0;
 
-    cacheBody = new bitset<64>[MAX_CACHE_LINE_NUM]
-    { 0 };
-    LRU_priority = new unsigned long[MAX_CACHE_LINE_NUM]{0};
-
     current_access_line = 0;
     current_access_set = 0;
 }
 
-Cache::~Cache()
+void Analyzer::printAnalyzerProperties() const
 {
-    delete[] cacheBody;
-    delete[] LRU_priority;
+    cout << "Number of cache access: " << i_num_cache_access << endl;
+    cout << "Number of cache load: " << i_num_cache_load << endl;
+    cout << "Number of cache store: " << i_num_cache_store << endl;
+
+    cout << "Number of cache hit: " << i_num_cache_hit << endl;
+    cout << "Number of cache load hit: " << i_num_cache_load_hit << endl;
+    cout << "Number of cache store hit: " << i_num_cache_store_hit << endl;
+
+    cout << "Average cache hit rate: " << d_ave_rate << endl;
+    cout << "Average cache load hit rate: " << d_load_rate << endl;
+    cout << "Average cache store hit rate: " << d_store_rate << endl;
+
+    cout << "Current access line: " << current_access_line << endl;
+    cout << "Current access set: " << current_access_set << endl;
 }
 
 void Cache::printCacheInfo() const
@@ -140,8 +145,6 @@ void Cache::printCacheInfo() const
          << "===================Cache Info==================" << endl;
 
     printCacheProperties();
-    cout << "===============================================" << endl;
-    printAnalyzerProperties();
     cout << "===============================================" << endl;
     // printCacheBody();
     // cout << "===============================================" << endl;

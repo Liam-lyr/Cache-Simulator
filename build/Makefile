@@ -129,30 +129,6 @@ CacheSimulator/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheSimulator.dir/build.make CMakeFiles/CacheSimulator.dir/build
 .PHONY : CacheSimulator/fast
 
-src/InputUtilities.o: src/InputUtilities.cpp.o
-.PHONY : src/InputUtilities.o
-
-# target to build an object file
-src/InputUtilities.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheSimulator.dir/build.make CMakeFiles/CacheSimulator.dir/src/InputUtilities.cpp.o
-.PHONY : src/InputUtilities.cpp.o
-
-src/InputUtilities.i: src/InputUtilities.cpp.i
-.PHONY : src/InputUtilities.i
-
-# target to preprocess a source file
-src/InputUtilities.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheSimulator.dir/build.make CMakeFiles/CacheSimulator.dir/src/InputUtilities.cpp.i
-.PHONY : src/InputUtilities.cpp.i
-
-src/InputUtilities.s: src/InputUtilities.cpp.s
-.PHONY : src/InputUtilities.s
-
-# target to generate assembly for a file
-src/InputUtilities.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheSimulator.dir/build.make CMakeFiles/CacheSimulator.dir/src/InputUtilities.cpp.s
-.PHONY : src/InputUtilities.cpp.s
-
 src/base.o: src/base.cpp.o
 .PHONY : src/base.o
 
@@ -201,6 +177,54 @@ src/cacheBuildUp.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheSimulator.dir/build.make CMakeFiles/CacheSimulator.dir/src/cacheBuildUp.cpp.s
 .PHONY : src/cacheBuildUp.cpp.s
 
+src/fileTest.o: src/fileTest.cpp.o
+.PHONY : src/fileTest.o
+
+# target to build an object file
+src/fileTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheSimulator.dir/build.make CMakeFiles/CacheSimulator.dir/src/fileTest.cpp.o
+.PHONY : src/fileTest.cpp.o
+
+src/fileTest.i: src/fileTest.cpp.i
+.PHONY : src/fileTest.i
+
+# target to preprocess a source file
+src/fileTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheSimulator.dir/build.make CMakeFiles/CacheSimulator.dir/src/fileTest.cpp.i
+.PHONY : src/fileTest.cpp.i
+
+src/fileTest.s: src/fileTest.cpp.s
+.PHONY : src/fileTest.s
+
+# target to generate assembly for a file
+src/fileTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheSimulator.dir/build.make CMakeFiles/CacheSimulator.dir/src/fileTest.cpp.s
+.PHONY : src/fileTest.cpp.s
+
+src/inputUtilities.o: src/inputUtilities.cpp.o
+.PHONY : src/inputUtilities.o
+
+# target to build an object file
+src/inputUtilities.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheSimulator.dir/build.make CMakeFiles/CacheSimulator.dir/src/inputUtilities.cpp.o
+.PHONY : src/inputUtilities.cpp.o
+
+src/inputUtilities.i: src/inputUtilities.cpp.i
+.PHONY : src/inputUtilities.i
+
+# target to preprocess a source file
+src/inputUtilities.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheSimulator.dir/build.make CMakeFiles/CacheSimulator.dir/src/inputUtilities.cpp.i
+.PHONY : src/inputUtilities.cpp.i
+
+src/inputUtilities.s: src/inputUtilities.cpp.s
+.PHONY : src/inputUtilities.s
+
+# target to generate assembly for a file
+src/inputUtilities.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheSimulator.dir/build.make CMakeFiles/CacheSimulator.dir/src/inputUtilities.cpp.s
+.PHONY : src/inputUtilities.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -234,15 +258,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... CacheSimulator"
-	@echo "... src/InputUtilities.o"
-	@echo "... src/InputUtilities.i"
-	@echo "... src/InputUtilities.s"
 	@echo "... src/base.o"
 	@echo "... src/base.i"
 	@echo "... src/base.s"
 	@echo "... src/cacheBuildUp.o"
 	@echo "... src/cacheBuildUp.i"
 	@echo "... src/cacheBuildUp.s"
+	@echo "... src/fileTest.o"
+	@echo "... src/fileTest.i"
+	@echo "... src/fileTest.s"
+	@echo "... src/inputUtilities.o"
+	@echo "... src/inputUtilities.i"
+	@echo "... src/inputUtilities.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

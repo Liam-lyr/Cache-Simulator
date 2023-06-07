@@ -1,5 +1,5 @@
-#ifndef _BASE
-#define _BASE
+#ifndef _CACHE
+#define _CACHE
 
 //////////////////
 
@@ -8,6 +8,7 @@
 #include <string>
 #include <fstream>
 #include <limits>
+#include "analyzerUtils.h"
 
 //////////////////
 
@@ -78,32 +79,6 @@ protected:
 
 //////////////////
 
-/** Properties of analyzer **/
-class AnalyzerProperties
-{
-protected:
-    unsigned long i_num_cache_access; // total cache access count
-    unsigned long i_num_cache_load;   // total cahce load count
-    unsigned long i_num_cache_store;  // total cache store count
-
-    unsigned long i_num_cache_hit;       // total cache hit count
-    unsigned long i_num_cache_load_hit;  // total cache load hit count
-    unsigned long i_num_cache_store_hit; // total cache store hit count
-
-    double d_ave_rate;   // average cache hit rate
-    double d_load_rate;  // average cache load hit rate
-    double d_store_rate; // average cache store hit rate
-
-protected:
-    unsigned long current_access_line; // current access line
-    unsigned long current_access_set;  // current access set
-
-protected:
-    void printAnalyzerProperties() const;
-};
-
-//////////////////
-
 /** Cache body **/
 class CacheBody
 {
@@ -144,9 +119,10 @@ public:
 //////////////////
 
 /** Entire cache **/
-class Cache : public CacheProperties, public AnalyzerProperties, public CacheBody
+class Cache : public CacheProperties, public CacheBody
 {
     friend class InputUtilities; // InputUtilities should be able to access cache
+    friend class Analyzer;       // Analyzer should be able to access cache
 
 public:
     Cache();
@@ -161,4 +137,4 @@ private:
     inline void clearCacheBody();
 };
 
-#endif // _BASE
+#endif // _CACHE
