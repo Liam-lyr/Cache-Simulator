@@ -52,8 +52,8 @@ class CacheProperties
 {
 protected:
     unsigned long i_cache_size;         // entire cache size (KB)
-    unsigned long i_cache_block_size;   // cache block size (Byte) (i.e. line size but ignoring flags)
-    unsigned long i_cache_line_size;    // cache line size (Byte) (i.e. line size including flags, round to upper bound)
+    unsigned long i_cache_block_size;   // cache block size (Byte) (i.e. line size but ignoring tag & flags)
+    unsigned long i_cache_line_size;    // cache line size (Byte) (i.e. line size including tag & flags, round to upper bound)
     unsigned long i_cache_set_line_num; // number of lines in each set (E)
     unsigned long i_cache_set_num;      // number of sets (S)
     unsigned long i_cache_line_num;     // number of cache lines (S * E)
@@ -64,9 +64,9 @@ protected:
 
     /** Properties for this cache **/
     /** will be calculated **/
-    unsigned short bit_cache_line_offset_width; // bits for in-line offset in address (bit)
+    unsigned short bit_cache_line_offset_width; // bits for line offset in address (bit)
     unsigned short bit_block_offset_width;      // bits for in-block size in address (bit) (b)
-    unsigned short bit_cache_set_offset_width;  // bits for in-set offset in address (bit) (s)
+    unsigned short bit_cache_set_offset_width;  // bits for set offset in address (bit) (s)
     unsigned short bit_cache_tag_width;         // bits for tag in address (bit)
     unsigned long long bit_cache_line_size;     // cache line size (bit) (i.e. line size including flags)
 
@@ -114,10 +114,14 @@ protected:
     std::string s_output_dir; // output file direction
 public:
     void printInputProperties() const;
+    std::string getConfigDir() const { return s_config_dir; }
+    std::string getTraceDir() const { return s_trace_dir; }
+    std::string getOutputDir() const { return s_output_dir; }
 };
 
 //////////////////
 
+class Analyzer;
 /** Entire cache **/
 class Cache : public CacheProperties, public CacheBody
 {
@@ -131,10 +135,11 @@ public:
     void printCacheBody() const;
 
 public:
-    void cacheBuildUp();
+    void cacheInit();
 
 private:
     inline void clearCacheBody();
+
 };
 
 #endif // _CACHE

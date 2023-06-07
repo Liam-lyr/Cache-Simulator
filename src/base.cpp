@@ -45,8 +45,8 @@ inline string CacheProperties::writeTranslate(unsigned int write) const
 void CacheProperties::printCacheProperties() const
 {
     cout << "Cache size: " << i_cache_size << " KB" << endl;
-    cout << "Cache block size: " << i_cache_block_size << " B (i.e. line size ignoring flags)" << endl;
-    cout << "Cache line size: " << i_cache_line_size << " B (i.e. line size including flags)(round to upper bound)" << endl;
+    cout << "Cache block size: " << i_cache_block_size << " B (i.e. line size ignoring tag & flags)" << endl;
+    cout << "Cache line size: " << i_cache_line_size << " B (i.e. line size including tag & flags)(round to upper bound)" << endl;
     cout << "Cache line number of each set: " << i_cache_set_line_num << endl;
     cout << "Cache set number: " << i_cache_set_num << endl;
     cout << "Cache line number: " << i_cache_line_num << endl;
@@ -57,11 +57,11 @@ void CacheProperties::printCacheProperties() const
 
     cout << "Miss penalty: " << i_miss_penalty << endl;
 
-    cout << "Bits for line size in address: " << bit_cache_line_offset_width << " bit" << endl;
-    cout << "Bits for block size in address: " << bit_block_offset_width << " bit" << endl;
-    cout << "Bits for set size in address: " << bit_cache_set_offset_width << " bit" << endl;
-    cout << "Bits for tag size in address: " << bit_cache_tag_width << " bit" << endl;
-    cout << "Cache line size: " << bit_cache_line_size << " bit (i.e. line size including flags)" << endl;
+    cout << "Cache line size: " << bit_cache_line_size << " bit (i.e. line size including tag & flags)" << endl;
+    cout << "Bits for line offset in address: " << bit_cache_line_offset_width << " bit" << endl;
+    cout << "Bits for in-block offset in address: " << bit_block_offset_width << " bit" << endl;
+    cout << "Bits for set offset in address: " << bit_cache_set_offset_width << " bit" << endl;
+    cout << "Bits for tag in address: " << bit_cache_tag_width << " bit" << endl;
 }
 
 void InputUtilities::printInputProperties() const
@@ -106,16 +106,16 @@ Cache::~Cache()
 Analyzer::Analyzer()
 {
     i_num_cache_access = 0;
-    i_num_cache_load = 0;
-    i_num_cache_store = 0;
+    i_num_cache_read = 0;
+    i_num_cache_write = 0;
 
     i_num_cache_hit = 0;
-    i_num_cache_load_hit = 0;
-    i_num_cache_store_hit = 0;
+    i_num_cache_read_hit = 0;
+    i_num_cache_write_hit = 0;
 
     d_ave_rate = 0;
-    d_load_rate = 0;
-    d_store_rate = 0;
+    d_read_rate = 0;
+    d_write_rate = 0;
 
     current_access_line = 0;
     current_access_set = 0;
@@ -124,16 +124,16 @@ Analyzer::Analyzer()
 void Analyzer::printAnalyzerProperties() const
 {
     cout << "Number of cache access: " << i_num_cache_access << endl;
-    cout << "Number of cache load: " << i_num_cache_load << endl;
-    cout << "Number of cache store: " << i_num_cache_store << endl;
+    cout << "Number of cache read: " << i_num_cache_read << endl;
+    cout << "Number of cache write: " << i_num_cache_write << endl;
 
     cout << "Number of cache hit: " << i_num_cache_hit << endl;
-    cout << "Number of cache load hit: " << i_num_cache_load_hit << endl;
-    cout << "Number of cache store hit: " << i_num_cache_store_hit << endl;
+    cout << "Number of cache read hit: " << i_num_cache_read_hit << endl;
+    cout << "Number of cache write hit: " << i_num_cache_write_hit << endl;
 
     cout << "Average cache hit rate: " << d_ave_rate << endl;
-    cout << "Average cache load hit rate: " << d_load_rate << endl;
-    cout << "Average cache store hit rate: " << d_store_rate << endl;
+    cout << "Average cache read hit rate: " << d_read_rate << endl;
+    cout << "Average cache write hit rate: " << d_write_rate << endl;
 
     cout << "Current access line: " << current_access_line << endl;
     cout << "Current access set: " << current_access_set << endl;

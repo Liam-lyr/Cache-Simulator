@@ -10,9 +10,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/src/base.cpp" "CMakeFiles/CacheSimulator.dir/src/base.cpp.o" "gcc" "CMakeFiles/CacheSimulator.dir/src/base.cpp.o.d"
   "/Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/src/cacheBuildUp.cpp" "CMakeFiles/CacheSimulator.dir/src/cacheBuildUp.cpp.o" "gcc" "CMakeFiles/CacheSimulator.dir/src/cacheBuildUp.cpp.o.d"
-  "/Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/src/fileTest.cpp" "CMakeFiles/CacheSimulator.dir/src/fileTest.cpp.o" "gcc" "CMakeFiles/CacheSimulator.dir/src/fileTest.cpp.o.d"
-  "/Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/src/inputUtilities.cpp" "CMakeFiles/CacheSimulator.dir/src/inputUtilities.cpp.o" "gcc" "CMakeFiles/CacheSimulator.dir/src/inputUtilities.cpp.o.d"
+  "/Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/src/inputUtils.cpp" "CMakeFiles/CacheSimulator.dir/src/inputUtils.cpp.o" "gcc" "CMakeFiles/CacheSimulator.dir/src/inputUtils.cpp.o.d"
   "/Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/src/main.cpp" "CMakeFiles/CacheSimulator.dir/src/main.cpp.o" "gcc" "CMakeFiles/CacheSimulator.dir/src/main.cpp.o.d"
+  "/Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/src/traceFileTest.cpp" "CMakeFiles/CacheSimulator.dir/src/traceFileTest.cpp.o" "gcc" "CMakeFiles/CacheSimulator.dir/src/traceFileTest.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -177,53 +177,29 @@ src/cacheBuildUp.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheSimulator.dir/build.make CMakeFiles/CacheSimulator.dir/src/cacheBuildUp.cpp.s
 .PHONY : src/cacheBuildUp.cpp.s
 
-src/fileTest.o: src/fileTest.cpp.o
-.PHONY : src/fileTest.o
+src/inputUtils.o: src/inputUtils.cpp.o
+.PHONY : src/inputUtils.o
 
 # target to build an object file
-src/fileTest.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheSimulator.dir/build.make CMakeFiles/CacheSimulator.dir/src/fileTest.cpp.o
-.PHONY : src/fileTest.cpp.o
+src/inputUtils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheSimulator.dir/build.make CMakeFiles/CacheSimulator.dir/src/inputUtils.cpp.o
+.PHONY : src/inputUtils.cpp.o
 
-src/fileTest.i: src/fileTest.cpp.i
-.PHONY : src/fileTest.i
-
-# target to preprocess a source file
-src/fileTest.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheSimulator.dir/build.make CMakeFiles/CacheSimulator.dir/src/fileTest.cpp.i
-.PHONY : src/fileTest.cpp.i
-
-src/fileTest.s: src/fileTest.cpp.s
-.PHONY : src/fileTest.s
-
-# target to generate assembly for a file
-src/fileTest.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheSimulator.dir/build.make CMakeFiles/CacheSimulator.dir/src/fileTest.cpp.s
-.PHONY : src/fileTest.cpp.s
-
-src/inputUtilities.o: src/inputUtilities.cpp.o
-.PHONY : src/inputUtilities.o
-
-# target to build an object file
-src/inputUtilities.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheSimulator.dir/build.make CMakeFiles/CacheSimulator.dir/src/inputUtilities.cpp.o
-.PHONY : src/inputUtilities.cpp.o
-
-src/inputUtilities.i: src/inputUtilities.cpp.i
-.PHONY : src/inputUtilities.i
+src/inputUtils.i: src/inputUtils.cpp.i
+.PHONY : src/inputUtils.i
 
 # target to preprocess a source file
-src/inputUtilities.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheSimulator.dir/build.make CMakeFiles/CacheSimulator.dir/src/inputUtilities.cpp.i
-.PHONY : src/inputUtilities.cpp.i
+src/inputUtils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheSimulator.dir/build.make CMakeFiles/CacheSimulator.dir/src/inputUtils.cpp.i
+.PHONY : src/inputUtils.cpp.i
 
-src/inputUtilities.s: src/inputUtilities.cpp.s
-.PHONY : src/inputUtilities.s
+src/inputUtils.s: src/inputUtils.cpp.s
+.PHONY : src/inputUtils.s
 
 # target to generate assembly for a file
-src/inputUtilities.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheSimulator.dir/build.make CMakeFiles/CacheSimulator.dir/src/inputUtilities.cpp.s
-.PHONY : src/inputUtilities.cpp.s
+src/inputUtils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheSimulator.dir/build.make CMakeFiles/CacheSimulator.dir/src/inputUtils.cpp.s
+.PHONY : src/inputUtils.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -249,6 +225,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheSimulator.dir/build.make CMakeFiles/CacheSimulator.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/traceFileTest.o: src/traceFileTest.cpp.o
+.PHONY : src/traceFileTest.o
+
+# target to build an object file
+src/traceFileTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheSimulator.dir/build.make CMakeFiles/CacheSimulator.dir/src/traceFileTest.cpp.o
+.PHONY : src/traceFileTest.cpp.o
+
+src/traceFileTest.i: src/traceFileTest.cpp.i
+.PHONY : src/traceFileTest.i
+
+# target to preprocess a source file
+src/traceFileTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheSimulator.dir/build.make CMakeFiles/CacheSimulator.dir/src/traceFileTest.cpp.i
+.PHONY : src/traceFileTest.cpp.i
+
+src/traceFileTest.s: src/traceFileTest.cpp.s
+.PHONY : src/traceFileTest.s
+
+# target to generate assembly for a file
+src/traceFileTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheSimulator.dir/build.make CMakeFiles/CacheSimulator.dir/src/traceFileTest.cpp.s
+.PHONY : src/traceFileTest.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -264,15 +264,15 @@ help:
 	@echo "... src/cacheBuildUp.o"
 	@echo "... src/cacheBuildUp.i"
 	@echo "... src/cacheBuildUp.s"
-	@echo "... src/fileTest.o"
-	@echo "... src/fileTest.i"
-	@echo "... src/fileTest.s"
-	@echo "... src/inputUtilities.o"
-	@echo "... src/inputUtilities.i"
-	@echo "... src/inputUtilities.s"
+	@echo "... src/inputUtils.o"
+	@echo "... src/inputUtils.i"
+	@echo "... src/inputUtils.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/traceFileTest.o"
+	@echo "... src/traceFileTest.i"
+	@echo "... src/traceFileTest.s"
 .PHONY : help
 
 

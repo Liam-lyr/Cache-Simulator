@@ -14,7 +14,7 @@ inline void Cache::clearCacheBody()
     }
 }
 
-void Cache::cacheBuildUp()
+void Cache::cacheInit()
 {
     clearCacheBody();
 }
