@@ -125,10 +125,24 @@ CMakeFiles/CacheSimulator.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CacheSimulator.dir/src/main.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/src/main.cpp -o CMakeFiles/CacheSimulator.dir/src/main.cpp.s
 
+CMakeFiles/CacheSimulator.dir/src/replaceUtils.cpp.o: CMakeFiles/CacheSimulator.dir/flags.make
+CMakeFiles/CacheSimulator.dir/src/replaceUtils.cpp.o: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/src/replaceUtils.cpp
+CMakeFiles/CacheSimulator.dir/src/replaceUtils.cpp.o: CMakeFiles/CacheSimulator.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/CacheSimulator.dir/src/replaceUtils.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CacheSimulator.dir/src/replaceUtils.cpp.o -MF CMakeFiles/CacheSimulator.dir/src/replaceUtils.cpp.o.d -o CMakeFiles/CacheSimulator.dir/src/replaceUtils.cpp.o -c /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/src/replaceUtils.cpp
+
+CMakeFiles/CacheSimulator.dir/src/replaceUtils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CacheSimulator.dir/src/replaceUtils.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/src/replaceUtils.cpp > CMakeFiles/CacheSimulator.dir/src/replaceUtils.cpp.i
+
+CMakeFiles/CacheSimulator.dir/src/replaceUtils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CacheSimulator.dir/src/replaceUtils.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/src/replaceUtils.cpp -o CMakeFiles/CacheSimulator.dir/src/replaceUtils.cpp.s
+
 CMakeFiles/CacheSimulator.dir/src/traceFileTest.cpp.o: CMakeFiles/CacheSimulator.dir/flags.make
 CMakeFiles/CacheSimulator.dir/src/traceFileTest.cpp.o: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/src/traceFileTest.cpp
 CMakeFiles/CacheSimulator.dir/src/traceFileTest.cpp.o: CMakeFiles/CacheSimulator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/CacheSimulator.dir/src/traceFileTest.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/CacheSimulator.dir/src/traceFileTest.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CacheSimulator.dir/src/traceFileTest.cpp.o -MF CMakeFiles/CacheSimulator.dir/src/traceFileTest.cpp.o.d -o CMakeFiles/CacheSimulator.dir/src/traceFileTest.cpp.o -c /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/src/traceFileTest.cpp
 
 CMakeFiles/CacheSimulator.dir/src/traceFileTest.cpp.i: cmake_force
@@ -145,6 +159,7 @@ CacheSimulator_OBJECTS = \
 "CMakeFiles/CacheSimulator.dir/src/cacheBuildUp.cpp.o" \
 "CMakeFiles/CacheSimulator.dir/src/inputUtils.cpp.o" \
 "CMakeFiles/CacheSimulator.dir/src/main.cpp.o" \
+"CMakeFiles/CacheSimulator.dir/src/replaceUtils.cpp.o" \
 "CMakeFiles/CacheSimulator.dir/src/traceFileTest.cpp.o"
 
 # External object files for target CacheSimulator
@@ -154,10 +169,11 @@ CacheSimulator: CMakeFiles/CacheSimulator.dir/src/base.cpp.o
 CacheSimulator: CMakeFiles/CacheSimulator.dir/src/cacheBuildUp.cpp.o
 CacheSimulator: CMakeFiles/CacheSimulator.dir/src/inputUtils.cpp.o
 CacheSimulator: CMakeFiles/CacheSimulator.dir/src/main.cpp.o
+CacheSimulator: CMakeFiles/CacheSimulator.dir/src/replaceUtils.cpp.o
 CacheSimulator: CMakeFiles/CacheSimulator.dir/src/traceFileTest.cpp.o
 CacheSimulator: CMakeFiles/CacheSimulator.dir/build.make
 CacheSimulator: CMakeFiles/CacheSimulator.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable CacheSimulator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable CacheSimulator"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CacheSimulator.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

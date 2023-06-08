@@ -84,7 +84,6 @@ class CacheBody
 {
 protected:
     std::bitset<64> *cacheBody;  // cache body, a line will be divided into multiple cache items, each 1 byte
-    unsigned long *LRU_priority; // LRU priority for each line (mod in a set)
 };
 
 //////////////////
@@ -127,6 +126,7 @@ class Cache : public CacheProperties, public CacheBody
 {
     friend class InputUtilities; // InputUtilities should be able to access cache
     friend class Analyzer;       // Analyzer should be able to access cache
+    friend class Test;
 
 public:
     Cache();

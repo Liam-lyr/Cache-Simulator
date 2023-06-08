@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/src/cacheBuildUp.cpp" "CMakeFiles/CacheSimulator.dir/src/cacheBuildUp.cpp.o" "gcc" "CMakeFiles/CacheSimulator.dir/src/cacheBuildUp.cpp.o.d"
   "/Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/src/inputUtils.cpp" "CMakeFiles/CacheSimulator.dir/src/inputUtils.cpp.o" "gcc" "CMakeFiles/CacheSimulator.dir/src/inputUtils.cpp.o.d"
   "/Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/src/main.cpp" "CMakeFiles/CacheSimulator.dir/src/main.cpp.o" "gcc" "CMakeFiles/CacheSimulator.dir/src/main.cpp.o.d"
+  "/Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/src/replaceUtils.cpp" "CMakeFiles/CacheSimulator.dir/src/replaceUtils.cpp.o" "gcc" "CMakeFiles/CacheSimulator.dir/src/replaceUtils.cpp.o.d"
   "/Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/src/traceFileTest.cpp" "CMakeFiles/CacheSimulator.dir/src/traceFileTest.cpp.o" "gcc" "CMakeFiles/CacheSimulator.dir/src/traceFileTest.cpp.o.d"
   )
 

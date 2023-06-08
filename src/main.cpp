@@ -3,6 +3,9 @@
 #include "cacheUtils.h"
 #include "analyzerUtils.h"
 
+
+#include "Test.h"
+
 using namespace std;
 
 int main(int argc, char *argv[])
@@ -24,7 +27,18 @@ int main(int argc, char *argv[])
     cache.cacheInit();
     analyzer.traceFileTest(cache, traceDir);
 
-    cache.printCacheBody();
+    cout << endl;
+    analyzer.printAnalyzerProperties();
+
+    // cache.printCacheBody();
+
 
     return 0;
 }
+
+// int main(int argc, char *argv[])
+// {
+//     Test test;
+//     test.testAnalyzer(argc, argv);
+//     return 0;
+// }

@@ -225,6 +225,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheSimulator.dir/build.make CMakeFiles/CacheSimulator.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/replaceUtils.o: src/replaceUtils.cpp.o
+.PHONY : src/replaceUtils.o
+
+# target to build an object file
+src/replaceUtils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheSimulator.dir/build.make CMakeFiles/CacheSimulator.dir/src/replaceUtils.cpp.o
+.PHONY : src/replaceUtils.cpp.o
+
+src/replaceUtils.i: src/replaceUtils.cpp.i
+.PHONY : src/replaceUtils.i
+
+# target to preprocess a source file
+src/replaceUtils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheSimulator.dir/build.make CMakeFiles/CacheSimulator.dir/src/replaceUtils.cpp.i
+.PHONY : src/replaceUtils.cpp.i
+
+src/replaceUtils.s: src/replaceUtils.cpp.s
+.PHONY : src/replaceUtils.s
+
+# target to generate assembly for a file
+src/replaceUtils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheSimulator.dir/build.make CMakeFiles/CacheSimulator.dir/src/replaceUtils.cpp.s
+.PHONY : src/replaceUtils.cpp.s
+
 src/traceFileTest.o: src/traceFileTest.cpp.o
 .PHONY : src/traceFileTest.o
 
@@ -270,6 +294,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/replaceUtils.o"
+	@echo "... src/replaceUtils.i"
+	@echo "... src/replaceUtils.s"
 	@echo "... src/traceFileTest.o"
 	@echo "... src/traceFileTest.i"
 	@echo "... src/traceFileTest.s"
