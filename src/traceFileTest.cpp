@@ -83,6 +83,10 @@ void Analyzer::traceFileTest(Cache &cache, const string &traceFileDir)
             exit(1);
         }
     }
+
+    traceFile.close();
+
+    updateResult(cache);
 }
 
 bool Analyzer::runOneInstruction(Cache &cache, const string &instrucAddr, const string &instrucLine)

@@ -19,7 +19,6 @@ int main(int argc, char *argv[])
 
     inputUtil.printInputProperties();
     cache.printCacheInfo();
-    analyzer.printAnalyzerProperties();
 
     string traceDir = inputUtil.getTraceDir();
     string outputDir = inputUtil.getOutputDir();

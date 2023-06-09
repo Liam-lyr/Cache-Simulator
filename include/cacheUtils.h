@@ -83,7 +83,7 @@ protected:
 class CacheBody
 {
 protected:
-    std::bitset<64> *cacheBody;  // cache body, a line will be divided into multiple cache items, each 1 byte
+    std::bitset<64> *cacheBody; // cache body, a line will be divided into multiple cache items, each 1 byte
 };
 
 //////////////////
@@ -139,7 +139,6 @@ public:
 
 private:
     inline void clearCacheBody();
-
 };
 
 #endif // _CACHE

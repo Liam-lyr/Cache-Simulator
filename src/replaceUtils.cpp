@@ -1,6 +1,7 @@
 #include <iostream>
 #include <random>
 #include <exception>
+#include <ctime>
 
 #include "cacheUtils.h"
 #include "analyzerUtils.h"
@@ -143,14 +144,14 @@ void Analyzer::randomMiss(Cache &cache)
     {
         // find a random line to replace
         static uniform_int_distribution<unsigned long> u(0, cache.i_cache_line_num - 1);
-        static default_random_engine e;
+        static default_random_engine e(time(0));
         current_access_line = u(e);
     }
     else if (cache.t_assoc == SET_ASSOCIATIVE)
     {
         // find a random line to replace
         static uniform_int_distribution<unsigned long> u(0, cache.i_cache_set_line_num - 1);
-        static default_random_engine e;
+        static default_random_engine e(time(0));
         current_access_line = current_access_set * cache.i_cache_set_line_num + u(e);
     }
     else

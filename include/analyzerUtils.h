@@ -33,6 +33,9 @@ protected:
     double d_read_rate;  // average cache read hit rate
     double d_write_rate; // average cache write hit rate
 
+    unsigned long long i_total_cache_access_cycles; // total cache access cycles
+    long double d_ave_cache_access_cycles;          // average cache access cycles
+
 protected:
     unsigned long current_access_line; // cache line currently accesssing
     unsigned long current_access_set;  // cache set currently accessing
@@ -54,6 +57,7 @@ protected:
     void readMem(Cache &, const std::bitset<48> &addr);
     inline void writeMem(const Cache &, const std::bitset<48> &addr);
     void replace(Cache &, const std::bitset<48> &addr);
+    void updateResult(const Cache &);
 };
 
 //////////////////

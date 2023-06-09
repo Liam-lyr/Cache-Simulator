@@ -6,6 +6,7 @@
 #include <limits>
 
 #include "cacheUtils.h"
+#include "analyzerUtils.h"
 
 using namespace std;
 
@@ -34,7 +35,7 @@ void InputUtilities::setCacheBlockSize(Cache &cache, ifstream &configFile) const
 
     if (temp < 1 || temp >= MAX_CACHE_LINE_SIZE || (temp & (~temp + 1)) != temp)
     {
-        throw("Cache line size is not valid!");
+        throw("Cache block size is not valid!");
     }
 
     cache.i_cache_block_size = temp;
