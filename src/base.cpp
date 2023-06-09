@@ -151,8 +151,8 @@ void Analyzer::printAnalyzerProperties() const
     cout << "Average cache read hit rate: " << d_read_rate * 100 << "%" << endl;
     cout << "Average cache write hit rate: " << d_write_rate * 100 << "%" << endl;
 
-    cout << "Total cache access cycles: " << i_total_cache_access_cycles << "cycles" << endl;
-    cout << "Average cache access cycles: " << d_ave_cache_access_cycles << "cycles" << endl;
+    cout << "Total cache access cycles: " << i_total_cache_access_cycles << " cycles" << endl;
+    cout << "Average cache access cycles: " << d_ave_cache_access_cycles << " cycles" << endl;
 
     // cout << "Current access line: " << current_access_line << endl;
     // cout << "Current access set: " << current_access_set << endl;
@@ -191,4 +191,22 @@ void Analyzer::updateResult(const Cache &cache)
     d_write_rate = (double)i_num_cache_write_hit / (double)i_num_cache_write;
     i_total_cache_access_cycles = i_num_cache_access + cache.i_miss_penalty * (i_num_mem_read + i_num_mem_write);
     d_ave_cache_access_cycles = (long double)i_total_cache_access_cycles / (long double)i_num_cache_access;
+}
+
+void Analyzer::outputToFile(const string &outputFileDir) const
+{
+    ofstream outputFile(outputFileDir);
+    if (!outputFile.is_open())
+    {
+        cout << "Error: Output file open failed!" << endl;
+        exit(1);
+    }
+
+    outputFile << "Total Hit Rate: " << d_ave_rate * 100 << "%" << endl;
+    outputFile << "Load Hit Rate: " << d_read_rate * 100 << "%" << endl;
+    outputFile << "Store Hit Rate: " << d_write_rate * 100 << "%" << endl;
+    outputFile << "Total Run Time: " << i_total_cache_access_cycles << endl;
+    outputFile << "AVG MA Latency: " << fixed << setprecision(2) << d_ave_cache_access_cycles << endl;
+
+    outputFile.close();
 }

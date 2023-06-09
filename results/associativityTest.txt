@@ -33,8 +33,8 @@ Number of memory write: 3022
 Average cache hit rate: 95.1826%
 Average cache read hit rate: 95.0724%
 Average cache write hit rate: 95.439%
-Total cache access cycles: 983076cycles
-Average cache access cycles: 4.02775cycles
+Total cache access cycles: 983076 cycles
+Average cache access cycles: 4.02775 cycles
 ===============================================
 
 
@@ -73,8 +73,8 @@ Number of memory write: 1979
 Average cache hit rate: 96.1336%
 Average cache read hit rate: 95.9975%
 Average cache write hit rate: 96.4501%
-Total cache access cycles: 814876cycles
-Average cache access cycles: 3.33862cycles
+Total cache access cycles: 814876 cycles
+Average cache access cycles: 3.33862 cycles
 ===============================================
 
 
@@ -113,8 +113,8 @@ Number of memory write: 1794
 Average cache hit rate: 96.1909%
 Average cache read hit rate: 96.0561%
 Average cache write hit rate: 96.5046%
-Total cache access cycles: 798626cycles
-Average cache access cycles: 3.27204cycles
+Total cache access cycles: 798626 cycles
+Average cache access cycles: 3.27204 cycles
 ===============================================
 
 
@@ -153,8 +153,8 @@ Number of memory write: 1747
 Average cache hit rate: 96.2233%
 Average cache read hit rate: 96.1047%
 Average cache write hit rate: 96.4992%
-Total cache access cycles: 792326cycles
-Average cache access cycles: 3.24623cycles
+Total cache access cycles: 792326 cycles
+Average cache access cycles: 3.24623 cycles
 ===============================================
 
 

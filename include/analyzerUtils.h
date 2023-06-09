@@ -46,6 +46,7 @@ public:
     ~Analyzer();
     void printAnalyzerProperties() const;
     void traceFileTest(Cache &, const std::string &traceFileDir);
+    void outputToFile(const std::string &outputFileDir) const;
 
 protected:
     bool runOneInstruction(Cache &, const std::string &instrucAddr, const std::string &instrucLine);

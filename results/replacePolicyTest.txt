@@ -33,8 +33,8 @@ Number of memory write: 1794
 Average cache hit rate: 96.1909%
 Average cache read hit rate: 96.0561%
 Average cache write hit rate: 96.5046%
-Total cache access cycles: 798626cycles
-Average cache access cycles: 3.27204cycles
+Total cache access cycles: 798626 cycles
+Average cache access cycles: 3.27204 cycles
 ===============================================
 
 
@@ -65,16 +65,16 @@ Bits for tag in address: 34 bit
 Number of cache access: 244076
 Number of cache read: 170693
 Number of cache write: 73383
-Number of cache hit: 234453
-Number of cache read hit: 163711
-Number of cache write hit: 70742
-Number of memory read: 9623
-Number of memory write: 2057
-Average cache hit rate: 96.0574%
-Average cache read hit rate: 95.9096%
-Average cache write hit rate: 96.4011%
-Total cache access cycles: 828076cycles
-Average cache access cycles: 3.3927cycles
+Number of cache hit: 234419
+Number of cache read hit: 163657
+Number of cache write hit: 70762
+Number of memory read: 9657
+Number of memory write: 2082
+Average cache hit rate: 96.0434%
+Average cache read hit rate: 95.878%
+Average cache write hit rate: 96.4283%
+Total cache access cycles: 831026 cycles
+Average cache access cycles: 3.40478 cycles
 ===============================================
 
 

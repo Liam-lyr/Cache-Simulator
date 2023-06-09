@@ -31,13 +31,11 @@ int main(int argc, char *argv[])
 
     // cache.printCacheBody();
 
+    if(!outputDir.empty())
+    {
+        analyzer.outputToFile(outputDir);
+    }
+
 
     return 0;
 }
-
-// int main(int argc, char *argv[])
-// {
-//     Test test;
-//     test.testAnalyzer(argc, argv);
-//     return 0;
-// }
