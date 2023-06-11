@@ -13,7 +13,7 @@ Type of association: N-way set associative
 Type of replacement: LRU
 Type of write policy: Write back & Write allocate
 Miss penalty: 50 cycles
-Cache line size: 290 bit (i.e. line size including tag & flags)
+Cache line size: 291 bit (i.e. line size including tag & flags)
 Bits for line offset in address: 0 bit
 Bits for in-block offset in address: 5 bit
 Bits for set offset in address: 10 bit
@@ -25,16 +25,16 @@ Bits for tag in address: 33 bit
 Number of cache access: 244076
 Number of cache read: 170693
 Number of cache write: 73383
-Number of cache hit: 229026
-Number of cache read hit: 163968
-Number of cache write hit: 65058
-Number of memory read: 6725
-Number of memory write: 73383
-Average cache hit rate: 93.8339%
-Average cache read hit rate: 96.0602%
-Average cache write hit rate: 88.6554%
-Total cache access cycles: 4249476 cycles
-Average cache access cycles: 17.4105 cycles
+Number of cache hit: 235624
+Number of cache read hit: 164730
+Number of cache write hit: 70894
+Number of memory read: 8452
+Number of memory write: 1426
+Average cache hit rate: 96.5371%
+Average cache read hit rate: 96.5066%
+Average cache write hit rate: 96.6082%
+Total cache access cycles: 737976 cycles
+Average cache access cycles: 3.02355 cycles
 ===============================================
 
 
@@ -53,7 +53,7 @@ Type of association: N-way set associative
 Type of replacement: Random
 Type of write policy: Write back & Write allocate
 Miss penalty: 50 cycles
-Cache line size: 290 bit (i.e. line size including tag & flags)
+Cache line size: 291 bit (i.e. line size including tag & flags)
 Bits for line offset in address: 0 bit
 Bits for in-block offset in address: 5 bit
 Bits for set offset in address: 10 bit
@@ -65,16 +65,16 @@ Bits for tag in address: 33 bit
 Number of cache access: 244076
 Number of cache read: 170693
 Number of cache write: 73383
-Number of cache hit: 228722
-Number of cache read hit: 163719
-Number of cache write hit: 65003
-Number of memory read: 6974
-Number of memory write: 73383
-Average cache hit rate: 93.7093%
-Average cache read hit rate: 95.9143%
-Average cache write hit rate: 88.5805%
-Total cache access cycles: 4261926 cycles
-Average cache access cycles: 17.4615 cycles
+Number of cache hit: 235335
+Number of cache read hit: 164488
+Number of cache write hit: 70847
+Number of memory read: 8741
+Number of memory write: 1395
+Average cache hit rate: 96.4187%
+Average cache read hit rate: 96.3648%
+Average cache write hit rate: 96.5442%
+Total cache access cycles: 750876 cycles
+Average cache access cycles: 3.0764 cycles
 ===============================================
 
 
