@@ -1,0 +1,800 @@
+Configuration file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/confs/hitRate-blockSize-cacheSize/32B-dm-16KB-lru-50-wb-wa.txt
+Trace file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/traces/ls.trace
+Output file direction: 
+===============================================
+===================Cache Info==================
+Cache size: 16 KB
+Cache block size: 32 B (i.e. line size ignoring tag & flags)
+Cache line size: 37 B (i.e. line size including tag & flags)(round to upper bound)
+Cache line number of each set: 0
+Cache set number: 0
+Cache line number: 512
+Type of association: Direct mapped
+Type of replacement: none
+Type of write policy: Write back & Write allocate
+Miss penalty: 50 cycles
+Cache line size: 291 bit (i.e. line size including tag & flags)
+Bits for line offset in address: 9 bit
+Bits for in-block offset in address: 5 bit
+Bits for set offset in address: 0 bit
+Bits for tag in address: 34 bit
+===============================================
+
+===============================================
+================Analyzer Info==================
+Number of cache access: 244076
+Number of cache read: 170693
+Number of cache write: 73383
+Number of cache hit: 219008
+Number of cache read hit: 157376
+Number of cache write hit: 61632
+Number of memory read: 13317
+Number of memory write: 73383
+Average cache hit rate: 89.7294%
+Average cache read hit rate: 92.1983%
+Average cache write hit rate: 83.9868%
+Total cache access cycles: 4579076 cycles
+Average cache access cycles: 18.7609 cycles
+===============================================
+
+
+Configuration file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/confs/hitRate-blockSize-cacheSize/64B-dm-16KB-lru-50-wb-wa.txt
+Trace file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/traces/ls.trace
+Output file direction: 
+===============================================
+===================Cache Info==================
+Cache size: 16 KB
+Cache block size: 64 B (i.e. line size ignoring tag & flags)
+Cache line size: 69 B (i.e. line size including tag & flags)(round to upper bound)
+Cache line number of each set: 0
+Cache set number: 0
+Cache line number: 256
+Type of association: Direct mapped
+Type of replacement: none
+Type of write policy: Write back & Write allocate
+Miss penalty: 50 cycles
+Cache line size: 547 bit (i.e. line size including tag & flags)
+Bits for line offset in address: 8 bit
+Bits for in-block offset in address: 6 bit
+Bits for set offset in address: 0 bit
+Bits for tag in address: 34 bit
+===============================================
+
+===============================================
+================Analyzer Info==================
+Number of cache access: 244076
+Number of cache read: 170693
+Number of cache write: 73383
+Number of cache hit: 221971
+Number of cache read hit: 159536
+Number of cache write hit: 62435
+Number of memory read: 11157
+Number of memory write: 73383
+Average cache hit rate: 90.9434%
+Average cache read hit rate: 93.4637%
+Average cache write hit rate: 85.081%
+Total cache access cycles: 4471076 cycles
+Average cache access cycles: 18.3184 cycles
+===============================================
+
+
+Configuration file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/confs/hitRate-blockSize-cacheSize/128B-dm-16KB-lru-50-wb-wa.txt
+Trace file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/traces/ls.trace
+Output file direction: 
+===============================================
+===================Cache Info==================
+Cache size: 16 KB
+Cache block size: 128 B (i.e. line size ignoring tag & flags)
+Cache line size: 133 B (i.e. line size including tag & flags)(round to upper bound)
+Cache line number of each set: 0
+Cache set number: 0
+Cache line number: 128
+Type of association: Direct mapped
+Type of replacement: none
+Type of write policy: Write back & Write allocate
+Miss penalty: 50 cycles
+Cache line size: 1059 bit (i.e. line size including tag & flags)
+Bits for line offset in address: 7 bit
+Bits for in-block offset in address: 7 bit
+Bits for set offset in address: 0 bit
+Bits for tag in address: 34 bit
+===============================================
+
+===============================================
+================Analyzer Info==================
+Number of cache access: 244076
+Number of cache read: 170693
+Number of cache write: 73383
+Number of cache hit: 222686
+Number of cache read hit: 160201
+Number of cache write hit: 62485
+Number of memory read: 10492
+Number of memory write: 73383
+Average cache hit rate: 91.2363%
+Average cache read hit rate: 93.8533%
+Average cache write hit rate: 85.1491%
+Total cache access cycles: 4437826 cycles
+Average cache access cycles: 18.1821 cycles
+===============================================
+
+
+Configuration file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/confs/hitRate-blockSize-cacheSize/256B-dm-16KB-lru-50-wb-wa.txt
+Trace file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/traces/ls.trace
+Output file direction: 
+===============================================
+===================Cache Info==================
+Cache size: 16 KB
+Cache block size: 256 B (i.e. line size ignoring tag & flags)
+Cache line size: 261 B (i.e. line size including tag & flags)(round to upper bound)
+Cache line number of each set: 0
+Cache set number: 0
+Cache line number: 64
+Type of association: Direct mapped
+Type of replacement: none
+Type of write policy: Write back & Write allocate
+Miss penalty: 50 cycles
+Cache line size: 2083 bit (i.e. line size including tag & flags)
+Bits for line offset in address: 6 bit
+Bits for in-block offset in address: 8 bit
+Bits for set offset in address: 0 bit
+Bits for tag in address: 34 bit
+===============================================
+
+===============================================
+================Analyzer Info==================
+Number of cache access: 244076
+Number of cache read: 170693
+Number of cache write: 73383
+Number of cache hit: 218439
+Number of cache read hit: 156722
+Number of cache write hit: 61717
+Number of memory read: 13971
+Number of memory write: 73383
+Average cache hit rate: 89.4963%
+Average cache read hit rate: 91.8151%
+Average cache write hit rate: 84.1026%
+Total cache access cycles: 4611776 cycles
+Average cache access cycles: 18.8948 cycles
+===============================================
+
+
+Configuration file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/confs/hitRate-blockSize-cacheSize/32B-dm-32KB-lru-50-wb-wa.txt
+Trace file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/traces/ls.trace
+Output file direction: 
+===============================================
+===================Cache Info==================
+Cache size: 32 KB
+Cache block size: 32 B (i.e. line size ignoring tag & flags)
+Cache line size: 37 B (i.e. line size including tag & flags)(round to upper bound)
+Cache line number of each set: 0
+Cache set number: 0
+Cache line number: 1024
+Type of association: Direct mapped
+Type of replacement: none
+Type of write policy: Write back & Write allocate
+Miss penalty: 50 cycles
+Cache line size: 290 bit (i.e. line size including tag & flags)
+Bits for line offset in address: 10 bit
+Bits for in-block offset in address: 5 bit
+Bits for set offset in address: 0 bit
+Bits for tag in address: 33 bit
+===============================================
+
+===============================================
+================Analyzer Info==================
+Number of cache access: 244076
+Number of cache read: 170693
+Number of cache write: 73383
+Number of cache hit: 221467
+Number of cache read hit: 159350
+Number of cache write hit: 62117
+Number of memory read: 11343
+Number of memory write: 73383
+Average cache hit rate: 90.7369%
+Average cache read hit rate: 93.3547%
+Average cache write hit rate: 84.6477%
+Total cache access cycles: 4480376 cycles
+Average cache access cycles: 18.3565 cycles
+===============================================
+
+
+Configuration file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/confs/hitRate-blockSize-cacheSize/64B-dm-32KB-lru-50-wb-wa.txt
+Trace file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/traces/ls.trace
+Output file direction: 
+===============================================
+===================Cache Info==================
+Cache size: 32 KB
+Cache block size: 64 B (i.e. line size ignoring tag & flags)
+Cache line size: 69 B (i.e. line size including tag & flags)(round to upper bound)
+Cache line number of each set: 0
+Cache set number: 0
+Cache line number: 512
+Type of association: Direct mapped
+Type of replacement: none
+Type of write policy: Write back & Write allocate
+Miss penalty: 50 cycles
+Cache line size: 546 bit (i.e. line size including tag & flags)
+Bits for line offset in address: 9 bit
+Bits for in-block offset in address: 6 bit
+Bits for set offset in address: 0 bit
+Bits for tag in address: 33 bit
+===============================================
+
+===============================================
+================Analyzer Info==================
+Number of cache access: 244076
+Number of cache read: 170693
+Number of cache write: 73383
+Number of cache hit: 224785
+Number of cache read hit: 161720
+Number of cache write hit: 63065
+Number of memory read: 8973
+Number of memory write: 73383
+Average cache hit rate: 92.0963%
+Average cache read hit rate: 94.7432%
+Average cache write hit rate: 85.9395%
+Total cache access cycles: 4361876 cycles
+Average cache access cycles: 17.871 cycles
+===============================================
+
+
+Configuration file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/confs/hitRate-blockSize-cacheSize/128B-dm-32KB-lru-50-wb-wa.txt
+Trace file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/traces/ls.trace
+Output file direction: 
+===============================================
+===================Cache Info==================
+Cache size: 32 KB
+Cache block size: 128 B (i.e. line size ignoring tag & flags)
+Cache line size: 133 B (i.e. line size including tag & flags)(round to upper bound)
+Cache line number of each set: 0
+Cache set number: 0
+Cache line number: 256
+Type of association: Direct mapped
+Type of replacement: none
+Type of write policy: Write back & Write allocate
+Miss penalty: 50 cycles
+Cache line size: 1058 bit (i.e. line size including tag & flags)
+Bits for line offset in address: 8 bit
+Bits for in-block offset in address: 7 bit
+Bits for set offset in address: 0 bit
+Bits for tag in address: 33 bit
+===============================================
+
+===============================================
+================Analyzer Info==================
+Number of cache access: 244076
+Number of cache read: 170693
+Number of cache write: 73383
+Number of cache hit: 226051
+Number of cache read hit: 162849
+Number of cache write hit: 63202
+Number of memory read: 7844
+Number of memory write: 73383
+Average cache hit rate: 92.615%
+Average cache read hit rate: 95.4046%
+Average cache write hit rate: 86.1262%
+Total cache access cycles: 4305426 cycles
+Average cache access cycles: 17.6397 cycles
+===============================================
+
+
+Configuration file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/confs/hitRate-blockSize-cacheSize/256B-dm-32KB-lru-50-wb-wa.txt
+Trace file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/traces/ls.trace
+Output file direction: 
+===============================================
+===================Cache Info==================
+Cache size: 32 KB
+Cache block size: 256 B (i.e. line size ignoring tag & flags)
+Cache line size: 261 B (i.e. line size including tag & flags)(round to upper bound)
+Cache line number of each set: 0
+Cache set number: 0
+Cache line number: 128
+Type of association: Direct mapped
+Type of replacement: none
+Type of write policy: Write back & Write allocate
+Miss penalty: 50 cycles
+Cache line size: 2082 bit (i.e. line size including tag & flags)
+Bits for line offset in address: 7 bit
+Bits for in-block offset in address: 8 bit
+Bits for set offset in address: 0 bit
+Bits for tag in address: 33 bit
+===============================================
+
+===============================================
+================Analyzer Info==================
+Number of cache access: 244076
+Number of cache read: 170693
+Number of cache write: 73383
+Number of cache hit: 224584
+Number of cache read hit: 162043
+Number of cache write hit: 62541
+Number of memory read: 8650
+Number of memory write: 73383
+Average cache hit rate: 92.014%
+Average cache read hit rate: 94.9324%
+Average cache write hit rate: 85.2255%
+Total cache access cycles: 4345726 cycles
+Average cache access cycles: 17.8048 cycles
+===============================================
+
+
+Configuration file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/confs/hitRate-blockSize-cacheSize/32B-dm-64KB-lru-50-wb-wa.txt
+Trace file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/traces/ls.trace
+Output file direction: 
+===============================================
+===================Cache Info==================
+Cache size: 64 KB
+Cache block size: 32 B (i.e. line size ignoring tag & flags)
+Cache line size: 37 B (i.e. line size including tag & flags)(round to upper bound)
+Cache line number of each set: 0
+Cache set number: 0
+Cache line number: 2048
+Type of association: Direct mapped
+Type of replacement: none
+Type of write policy: Write back & Write allocate
+Miss penalty: 50 cycles
+Cache line size: 289 bit (i.e. line size including tag & flags)
+Bits for line offset in address: 11 bit
+Bits for in-block offset in address: 5 bit
+Bits for set offset in address: 0 bit
+Bits for tag in address: 32 bit
+===============================================
+
+===============================================
+================Analyzer Info==================
+Number of cache access: 244076
+Number of cache read: 170693
+Number of cache write: 73383
+Number of cache hit: 223753
+Number of cache read hit: 161158
+Number of cache write hit: 62595
+Number of memory read: 9535
+Number of memory write: 73383
+Average cache hit rate: 91.6735%
+Average cache read hit rate: 94.4139%
+Average cache write hit rate: 85.299%
+Total cache access cycles: 4389976 cycles
+Average cache access cycles: 17.9861 cycles
+===============================================
+
+
+Configuration file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/confs/hitRate-blockSize-cacheSize/64B-dm-64KB-lru-50-wb-wa.txt
+Trace file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/traces/ls.trace
+Output file direction: 
+===============================================
+===================Cache Info==================
+Cache size: 64 KB
+Cache block size: 64 B (i.e. line size ignoring tag & flags)
+Cache line size: 69 B (i.e. line size including tag & flags)(round to upper bound)
+Cache line number of each set: 0
+Cache set number: 0
+Cache line number: 1024
+Type of association: Direct mapped
+Type of replacement: none
+Type of write policy: Write back & Write allocate
+Miss penalty: 50 cycles
+Cache line size: 545 bit (i.e. line size including tag & flags)
+Bits for line offset in address: 10 bit
+Bits for in-block offset in address: 6 bit
+Bits for set offset in address: 0 bit
+Bits for tag in address: 32 bit
+===============================================
+
+===============================================
+================Analyzer Info==================
+Number of cache access: 244076
+Number of cache read: 170693
+Number of cache write: 73383
+Number of cache hit: 227148
+Number of cache read hit: 163856
+Number of cache write hit: 63292
+Number of memory read: 6837
+Number of memory write: 73383
+Average cache hit rate: 93.0645%
+Average cache read hit rate: 95.9946%
+Average cache write hit rate: 86.2489%
+Total cache access cycles: 4255076 cycles
+Average cache access cycles: 17.4334 cycles
+===============================================
+
+
+Configuration file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/confs/hitRate-blockSize-cacheSize/128B-dm-64KB-lru-50-wb-wa.txt
+Trace file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/traces/ls.trace
+Output file direction: 
+===============================================
+===================Cache Info==================
+Cache size: 64 KB
+Cache block size: 128 B (i.e. line size ignoring tag & flags)
+Cache line size: 133 B (i.e. line size including tag & flags)(round to upper bound)
+Cache line number of each set: 0
+Cache set number: 0
+Cache line number: 512
+Type of association: Direct mapped
+Type of replacement: none
+Type of write policy: Write back & Write allocate
+Miss penalty: 50 cycles
+Cache line size: 1057 bit (i.e. line size including tag & flags)
+Bits for line offset in address: 9 bit
+Bits for in-block offset in address: 7 bit
+Bits for set offset in address: 0 bit
+Bits for tag in address: 32 bit
+===============================================
+
+===============================================
+================Analyzer Info==================
+Number of cache access: 244076
+Number of cache read: 170693
+Number of cache write: 73383
+Number of cache hit: 228536
+Number of cache read hit: 165125
+Number of cache write hit: 63411
+Number of memory read: 5568
+Number of memory write: 73383
+Average cache hit rate: 93.6331%
+Average cache read hit rate: 96.738%
+Average cache write hit rate: 86.411%
+Total cache access cycles: 4191626 cycles
+Average cache access cycles: 17.1734 cycles
+===============================================
+
+
+Configuration file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/confs/hitRate-blockSize-cacheSize/256B-dm-64KB-lru-50-wb-wa.txt
+Trace file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/traces/ls.trace
+Output file direction: 
+===============================================
+===================Cache Info==================
+Cache size: 64 KB
+Cache block size: 256 B (i.e. line size ignoring tag & flags)
+Cache line size: 261 B (i.e. line size including tag & flags)(round to upper bound)
+Cache line number of each set: 0
+Cache set number: 0
+Cache line number: 256
+Type of association: Direct mapped
+Type of replacement: none
+Type of write policy: Write back & Write allocate
+Miss penalty: 50 cycles
+Cache line size: 2081 bit (i.e. line size including tag & flags)
+Bits for line offset in address: 8 bit
+Bits for in-block offset in address: 8 bit
+Bits for set offset in address: 0 bit
+Bits for tag in address: 32 bit
+===============================================
+
+===============================================
+================Analyzer Info==================
+Number of cache access: 244076
+Number of cache read: 170693
+Number of cache write: 73383
+Number of cache hit: 227549
+Number of cache read hit: 164689
+Number of cache write hit: 62860
+Number of memory read: 6004
+Number of memory write: 73383
+Average cache hit rate: 93.2287%
+Average cache read hit rate: 96.4826%
+Average cache write hit rate: 85.6602%
+Total cache access cycles: 4213426 cycles
+Average cache access cycles: 17.2628 cycles
+===============================================
+
+
+Configuration file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/confs/hitRate-blockSize-cacheSize/32B-dm-128KB-lru-50-wb-wa.txt
+Trace file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/traces/ls.trace
+Output file direction: 
+===============================================
+===================Cache Info==================
+Cache size: 128 KB
+Cache block size: 32 B (i.e. line size ignoring tag & flags)
+Cache line size: 36 B (i.e. line size including tag & flags)(round to upper bound)
+Cache line number of each set: 0
+Cache set number: 0
+Cache line number: 4096
+Type of association: Direct mapped
+Type of replacement: none
+Type of write policy: Write back & Write allocate
+Miss penalty: 50 cycles
+Cache line size: 288 bit (i.e. line size including tag & flags)
+Bits for line offset in address: 12 bit
+Bits for in-block offset in address: 5 bit
+Bits for set offset in address: 0 bit
+Bits for tag in address: 31 bit
+===============================================
+
+===============================================
+================Analyzer Info==================
+Number of cache access: 244076
+Number of cache read: 170693
+Number of cache write: 73383
+Number of cache hit: 225608
+Number of cache read hit: 162586
+Number of cache write hit: 63022
+Number of memory read: 8107
+Number of memory write: 73383
+Average cache hit rate: 92.4335%
+Average cache read hit rate: 95.2505%
+Average cache write hit rate: 85.8809%
+Total cache access cycles: 4318576 cycles
+Average cache access cycles: 17.6936 cycles
+===============================================
+
+
+Configuration file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/confs/hitRate-blockSize-cacheSize/64B-dm-128KB-lru-50-wb-wa.txt
+Trace file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/traces/ls.trace
+Output file direction: 
+===============================================
+===================Cache Info==================
+Cache size: 128 KB
+Cache block size: 64 B (i.e. line size ignoring tag & flags)
+Cache line size: 68 B (i.e. line size including tag & flags)(round to upper bound)
+Cache line number of each set: 0
+Cache set number: 0
+Cache line number: 2048
+Type of association: Direct mapped
+Type of replacement: none
+Type of write policy: Write back & Write allocate
+Miss penalty: 50 cycles
+Cache line size: 544 bit (i.e. line size including tag & flags)
+Bits for line offset in address: 11 bit
+Bits for in-block offset in address: 6 bit
+Bits for set offset in address: 0 bit
+Bits for tag in address: 31 bit
+===============================================
+
+===============================================
+================Analyzer Info==================
+Number of cache access: 244076
+Number of cache read: 170693
+Number of cache write: 73383
+Number of cache hit: 229309
+Number of cache read hit: 165495
+Number of cache write hit: 63814
+Number of memory read: 5198
+Number of memory write: 73383
+Average cache hit rate: 93.9498%
+Average cache read hit rate: 96.9548%
+Average cache write hit rate: 86.9602%
+Total cache access cycles: 4173126 cycles
+Average cache access cycles: 17.0976 cycles
+===============================================
+
+
+Configuration file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/confs/hitRate-blockSize-cacheSize/128B-dm-128KB-lru-50-wb-wa.txt
+Trace file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/traces/ls.trace
+Output file direction: 
+===============================================
+===================Cache Info==================
+Cache size: 128 KB
+Cache block size: 128 B (i.e. line size ignoring tag & flags)
+Cache line size: 132 B (i.e. line size including tag & flags)(round to upper bound)
+Cache line number of each set: 0
+Cache set number: 0
+Cache line number: 1024
+Type of association: Direct mapped
+Type of replacement: none
+Type of write policy: Write back & Write allocate
+Miss penalty: 50 cycles
+Cache line size: 1056 bit (i.e. line size including tag & flags)
+Bits for line offset in address: 10 bit
+Bits for in-block offset in address: 7 bit
+Bits for set offset in address: 0 bit
+Bits for tag in address: 31 bit
+===============================================
+
+===============================================
+================Analyzer Info==================
+Number of cache access: 244076
+Number of cache read: 170693
+Number of cache write: 73383
+Number of cache hit: 230863
+Number of cache read hit: 167006
+Number of cache write hit: 63857
+Number of memory read: 3687
+Number of memory write: 73383
+Average cache hit rate: 94.5865%
+Average cache read hit rate: 97.84%
+Average cache write hit rate: 87.0188%
+Total cache access cycles: 4097576 cycles
+Average cache access cycles: 16.7881 cycles
+===============================================
+
+
+Configuration file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/confs/hitRate-blockSize-cacheSize/256B-dm-128KB-lru-50-wb-wa.txt
+Trace file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/traces/ls.trace
+Output file direction: 
+===============================================
+===================Cache Info==================
+Cache size: 128 KB
+Cache block size: 256 B (i.e. line size ignoring tag & flags)
+Cache line size: 260 B (i.e. line size including tag & flags)(round to upper bound)
+Cache line number of each set: 0
+Cache set number: 0
+Cache line number: 512
+Type of association: Direct mapped
+Type of replacement: none
+Type of write policy: Write back & Write allocate
+Miss penalty: 50 cycles
+Cache line size: 2080 bit (i.e. line size including tag & flags)
+Bits for line offset in address: 9 bit
+Bits for in-block offset in address: 8 bit
+Bits for set offset in address: 0 bit
+Bits for tag in address: 31 bit
+===============================================
+
+===============================================
+================Analyzer Info==================
+Number of cache access: 244076
+Number of cache read: 170693
+Number of cache write: 73383
+Number of cache hit: 232099
+Number of cache read hit: 167614
+Number of cache write hit: 64485
+Number of memory read: 3079
+Number of memory write: 73383
+Average cache hit rate: 95.0929%
+Average cache read hit rate: 98.1962%
+Average cache write hit rate: 87.8746%
+Total cache access cycles: 4067176 cycles
+Average cache access cycles: 16.6636 cycles
+===============================================
+
+
+Configuration file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/confs/hitRate-blockSize-cacheSize/32B-dm-256KB-lru-50-wb-wa.txt
+Trace file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/traces/ls.trace
+Output file direction: 
+===============================================
+===================Cache Info==================
+Cache size: 256 KB
+Cache block size: 32 B (i.e. line size ignoring tag & flags)
+Cache line size: 36 B (i.e. line size including tag & flags)(round to upper bound)
+Cache line number of each set: 0
+Cache set number: 0
+Cache line number: 8192
+Type of association: Direct mapped
+Type of replacement: none
+Type of write policy: Write back & Write allocate
+Miss penalty: 50 cycles
+Cache line size: 287 bit (i.e. line size including tag & flags)
+Bits for line offset in address: 13 bit
+Bits for in-block offset in address: 5 bit
+Bits for set offset in address: 0 bit
+Bits for tag in address: 30 bit
+===============================================
+
+===============================================
+================Analyzer Info==================
+Number of cache access: 244076
+Number of cache read: 170693
+Number of cache write: 73383
+Number of cache hit: 226211
+Number of cache read hit: 163018
+Number of cache write hit: 63193
+Number of memory read: 7675
+Number of memory write: 73383
+Average cache hit rate: 92.6806%
+Average cache read hit rate: 95.5036%
+Average cache write hit rate: 86.114%
+Total cache access cycles: 4296976 cycles
+Average cache access cycles: 17.6051 cycles
+===============================================
+
+
+Configuration file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/confs/hitRate-blockSize-cacheSize/64B-dm-256KB-lru-50-wb-wa.txt
+Trace file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/traces/ls.trace
+Output file direction: 
+===============================================
+===================Cache Info==================
+Cache size: 256 KB
+Cache block size: 64 B (i.e. line size ignoring tag & flags)
+Cache line size: 68 B (i.e. line size including tag & flags)(round to upper bound)
+Cache line number of each set: 0
+Cache set number: 0
+Cache line number: 4096
+Type of association: Direct mapped
+Type of replacement: none
+Type of write policy: Write back & Write allocate
+Miss penalty: 50 cycles
+Cache line size: 543 bit (i.e. line size including tag & flags)
+Bits for line offset in address: 12 bit
+Bits for in-block offset in address: 6 bit
+Bits for set offset in address: 0 bit
+Bits for tag in address: 30 bit
+===============================================
+
+===============================================
+================Analyzer Info==================
+Number of cache access: 244076
+Number of cache read: 170693
+Number of cache write: 73383
+Number of cache hit: 229848
+Number of cache read hit: 165900
+Number of cache write hit: 63948
+Number of memory read: 4793
+Number of memory write: 73383
+Average cache hit rate: 94.1707%
+Average cache read hit rate: 97.192%
+Average cache write hit rate: 87.1428%
+Total cache access cycles: 4152876 cycles
+Average cache access cycles: 17.0147 cycles
+===============================================
+
+
+Configuration file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/confs/hitRate-blockSize-cacheSize/128B-dm-256KB-lru-50-wb-wa.txt
+Trace file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/traces/ls.trace
+Output file direction: 
+===============================================
+===================Cache Info==================
+Cache size: 256 KB
+Cache block size: 128 B (i.e. line size ignoring tag & flags)
+Cache line size: 132 B (i.e. line size including tag & flags)(round to upper bound)
+Cache line number of each set: 0
+Cache set number: 0
+Cache line number: 2048
+Type of association: Direct mapped
+Type of replacement: none
+Type of write policy: Write back & Write allocate
+Miss penalty: 50 cycles
+Cache line size: 1055 bit (i.e. line size including tag & flags)
+Bits for line offset in address: 11 bit
+Bits for in-block offset in address: 7 bit
+Bits for set offset in address: 0 bit
+Bits for tag in address: 30 bit
+===============================================
+
+===============================================
+================Analyzer Info==================
+Number of cache access: 244076
+Number of cache read: 170693
+Number of cache write: 73383
+Number of cache hit: 231387
+Number of cache read hit: 167420
+Number of cache write hit: 63967
+Number of memory read: 3273
+Number of memory write: 73383
+Average cache hit rate: 94.8012%
+Average cache read hit rate: 98.0825%
+Average cache write hit rate: 87.1687%
+Total cache access cycles: 4076876 cycles
+Average cache access cycles: 16.7033 cycles
+===============================================
+
+
+Configuration file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/confs/hitRate-blockSize-cacheSize/256B-dm-256KB-lru-50-wb-wa.txt
+Trace file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/traces/ls.trace
+Output file direction: 
+===============================================
+===================Cache Info==================
+Cache size: 256 KB
+Cache block size: 256 B (i.e. line size ignoring tag & flags)
+Cache line size: 260 B (i.e. line size including tag & flags)(round to upper bound)
+Cache line number of each set: 0
+Cache set number: 0
+Cache line number: 1024
+Type of association: Direct mapped
+Type of replacement: none
+Type of write policy: Write back & Write allocate
+Miss penalty: 50 cycles
+Cache line size: 2079 bit (i.e. line size including tag & flags)
+Bits for line offset in address: 10 bit
+Bits for in-block offset in address: 8 bit
+Bits for set offset in address: 0 bit
+Bits for tag in address: 30 bit
+===============================================
+
+===============================================
+================Analyzer Info==================
+Number of cache access: 244076
+Number of cache read: 170693
+Number of cache write: 73383
+Number of cache hit: 232731
+Number of cache read hit: 168165
+Number of cache write hit: 64566
+Number of memory read: 2528
+Number of memory write: 73383
+Average cache hit rate: 95.3519%
+Average cache read hit rate: 98.519%
+Average cache write hit rate: 87.985%
+Total cache access cycles: 4039626 cycles
+Average cache access cycles: 16.5507 cycles
+===============================================
+
+

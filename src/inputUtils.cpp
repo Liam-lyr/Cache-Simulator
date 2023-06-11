@@ -115,10 +115,10 @@ void InputUtilities::setWritePolicy(Cache &cache, ifstream &configFile) const
     switch (temp)
     {
     case 0:
-        cache.t_write = WRITE_BACK;
+        cache.t_write = WRITE_THROUGH;
         break;
     case 1:
-        cache.t_write = WRITE_THROUGH;
+        cache.t_write = WRITE_BACK;
         break;
     default:
         cout << temp << endl;

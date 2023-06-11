@@ -8,6 +8,9 @@
 #include <string>
 #include <fstream>
 #include <limits>
+#include <cassert>
+#include <climits>
+
 #include "analyzerUtils.h"
 
 //////////////////
@@ -38,8 +41,8 @@ enum ReplacementPolicy
 // write policy
 enum WritePolicy
 {
-    WRITE_BACK,   // hit - write back.    miss - write allocate
-    WRITE_THROUGH // hit - write through. miss - not write allocate
+    WRITE_THROUGH, // hit - write through. miss - not write allocate
+    WRITE_BACK     // hit - write back.    miss - write allocate
 };
 
 #endif // STRUCT_TYPE
@@ -126,7 +129,6 @@ class Cache : public CacheProperties, public CacheBody
 {
     friend class InputUtilities; // InputUtilities should be able to access cache
     friend class Analyzer;       // Analyzer should be able to access cache
-    friend class Test;
 
 public:
     Cache();

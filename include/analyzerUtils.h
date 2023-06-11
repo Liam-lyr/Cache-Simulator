@@ -5,6 +5,8 @@
 #include <string>
 #include <fstream>
 #include <bitset>
+#include <cassert>
+#include <limits>
 
 #include "cacheUtils.h"
 
