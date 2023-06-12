@@ -1,0 +1,27 @@
+build/
+
+# Vim
+*.swp
+
+# Codeblocks
+bin/
+obj/
+
+# Visual Studio
+Debug/
+Release/
+
+# Eclipse
+.cproject
+.project
+.settings/
+
+# IDEA
+.idea/
+
+# Makefile
+*.o
+*.exe
+
+# CMake
+cmake-build-debug/
