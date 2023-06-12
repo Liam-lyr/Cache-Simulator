@@ -1,6 +1,6 @@
 Configuration file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/confs/hitRate-replacePolicy/32B-4way-128KB-lru-50-wb-wa.txt
 Trace file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/traces/ls.trace
-Output file direction: 
+Output file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/results/simplifiedOutputFiles/replacePolicy.txt
 ===============================================
 ===================Cache Info==================
 Cache size: 128 KB
@@ -40,7 +40,7 @@ Average cache access cycles: 3.02355 cycles
 
 Configuration file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/confs/hitRate-replacePolicy/32B-4way-128KB-rand-50-wb-wa.txt
 Trace file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/traces/ls.trace
-Output file direction: 
+Output file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/results/simplifiedOutputFiles/replacePolicy.txt
 ===============================================
 ===================Cache Info==================
 Cache size: 128 KB
@@ -65,16 +65,16 @@ Bits for tag in address: 33 bit
 Number of cache access: 244076
 Number of cache read: 170693
 Number of cache write: 73383
-Number of cache hit: 235335
-Number of cache read hit: 164488
-Number of cache write hit: 70847
-Number of memory read: 8741
-Number of memory write: 1395
-Average cache hit rate: 96.4187%
-Average cache read hit rate: 96.3648%
-Average cache write hit rate: 96.5442%
-Total cache access cycles: 750876 cycles
-Average cache access cycles: 3.0764 cycles
+Number of cache hit: 235341
+Number of cache read hit: 164496
+Number of cache write hit: 70845
+Number of memory read: 8735
+Number of memory write: 1374
+Average cache hit rate: 96.4212%
+Average cache read hit rate: 96.3695%
+Average cache write hit rate: 96.5414%
+Total cache access cycles: 749526 cycles
+Average cache access cycles: 3.07087 cycles
 ===============================================
 
 

@@ -1,0 +1,35 @@
+Total Hit Rate: 95.8681%
+Load Hit Rate: 95.943%
+Store Hit Rate: 95.6938%
+Total Run Time: 871526
+AVG MA Latency: 3.57
+
+
+Total Hit Rate: 96.4159%
+Load Hit Rate: 96.3636%
+Store Hit Rate: 96.5373%
+Total Run Time: 766476
+AVG MA Latency: 3.14
+
+
+Total Hit Rate: 96.5371%
+Load Hit Rate: 96.5066%
+Store Hit Rate: 96.6082%
+Total Run Time: 737976
+AVG MA Latency: 3.02
+
+
+Total Hit Rate: 96.5757%
+Load Hit Rate: 96.5546%
+Store Hit Rate: 96.6246%
+Total Run Time: 732476
+AVG MA Latency: 3.00
+
+
+Total Hit Rate: 96.5949%
+Load Hit Rate: 96.5863%
+Store Hit Rate: 96.615%
+Total Run Time: 730676
+AVG MA Latency: 2.99
+
+

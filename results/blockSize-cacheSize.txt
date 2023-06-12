@@ -1,6 +1,6 @@
 Configuration file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/confs/hitRate-blockSize-cacheSize/32B-dm-16KB-lru-50-wb-wa.txt
 Trace file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/traces/ls.trace
-Output file direction: 
+Output file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/results/simplifiedOutputFiles/blockSize-cacheSize.txt
 ===============================================
 ===================Cache Info==================
 Cache size: 16 KB
@@ -40,7 +40,7 @@ Average cache access cycles: 5.11163 cycles
 
 Configuration file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/confs/hitRate-blockSize-cacheSize/64B-dm-16KB-lru-50-wb-wa.txt
 Trace file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/traces/ls.trace
-Output file direction: 
+Output file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/results/simplifiedOutputFiles/blockSize-cacheSize.txt
 ===============================================
 ===================Cache Info==================
 Cache size: 16 KB
@@ -80,7 +80,7 @@ Average cache access cycles: 4.25472 cycles
 
 Configuration file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/confs/hitRate-blockSize-cacheSize/128B-dm-16KB-lru-50-wb-wa.txt
 Trace file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/traces/ls.trace
-Output file direction: 
+Output file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/results/simplifiedOutputFiles/blockSize-cacheSize.txt
 ===============================================
 ===================Cache Info==================
 Cache size: 16 KB
@@ -120,7 +120,7 @@ Average cache access cycles: 3.92757 cycles
 
 Configuration file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/confs/hitRate-blockSize-cacheSize/256B-dm-16KB-lru-50-wb-wa.txt
 Trace file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/traces/ls.trace
-Output file direction: 
+Output file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/results/simplifiedOutputFiles/blockSize-cacheSize.txt
 ===============================================
 ===================Cache Info==================
 Cache size: 16 KB
@@ -160,7 +160,7 @@ Average cache access cycles: 4.97048 cycles
 
 Configuration file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/confs/hitRate-blockSize-cacheSize/32B-dm-32KB-lru-50-wb-wa.txt
 Trace file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/traces/ls.trace
-Output file direction: 
+Output file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/results/simplifiedOutputFiles/blockSize-cacheSize.txt
 ===============================================
 ===================Cache Info==================
 Cache size: 32 KB
@@ -200,7 +200,7 @@ Average cache access cycles: 4.52452 cycles
 
 Configuration file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/confs/hitRate-blockSize-cacheSize/64B-dm-32KB-lru-50-wb-wa.txt
 Trace file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/traces/ls.trace
-Output file direction: 
+Output file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/results/simplifiedOutputFiles/blockSize-cacheSize.txt
 ===============================================
 ===================Cache Info==================
 Cache size: 32 KB
@@ -240,7 +240,7 @@ Average cache access cycles: 3.6588 cycles
 
 Configuration file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/confs/hitRate-blockSize-cacheSize/128B-dm-32KB-lru-50-wb-wa.txt
 Trace file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/traces/ls.trace
-Output file direction: 
+Output file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/results/simplifiedOutputFiles/blockSize-cacheSize.txt
 ===============================================
 ===================Cache Info==================
 Cache size: 32 KB
@@ -280,7 +280,7 @@ Average cache access cycles: 3.22861 cycles
 
 Configuration file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/confs/hitRate-blockSize-cacheSize/256B-dm-32KB-lru-50-wb-wa.txt
 Trace file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/traces/ls.trace
-Output file direction: 
+Output file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/results/simplifiedOutputFiles/blockSize-cacheSize.txt
 ===============================================
 ===================Cache Info==================
 Cache size: 32 KB
@@ -320,7 +320,7 @@ Average cache access cycles: 3.50086 cycles
 
 Configuration file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/confs/hitRate-blockSize-cacheSize/32B-dm-64KB-lru-50-wb-wa.txt
 Trace file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/traces/ls.trace
-Output file direction: 
+Output file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/results/simplifiedOutputFiles/blockSize-cacheSize.txt
 ===============================================
 ===================Cache Info==================
 Cache size: 64 KB
@@ -360,7 +360,7 @@ Average cache access cycles: 4.02775 cycles
 
 Configuration file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/confs/hitRate-blockSize-cacheSize/64B-dm-64KB-lru-50-wb-wa.txt
 Trace file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/traces/ls.trace
-Output file direction: 
+Output file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/results/simplifiedOutputFiles/blockSize-cacheSize.txt
 ===============================================
 ===================Cache Info==================
 Cache size: 64 KB
@@ -400,7 +400,7 @@ Average cache access cycles: 3.11246 cycles
 
 Configuration file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/confs/hitRate-blockSize-cacheSize/128B-dm-64KB-lru-50-wb-wa.txt
 Trace file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/traces/ls.trace
-Output file direction: 
+Output file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/results/simplifiedOutputFiles/blockSize-cacheSize.txt
 ===============================================
 ===================Cache Info==================
 Cache size: 64 KB
@@ -440,7 +440,7 @@ Average cache access cycles: 2.66628 cycles
 
 Configuration file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/confs/hitRate-blockSize-cacheSize/256B-dm-64KB-lru-50-wb-wa.txt
 Trace file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/traces/ls.trace
-Output file direction: 
+Output file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/results/simplifiedOutputFiles/blockSize-cacheSize.txt
 ===============================================
 ===================Cache Info==================
 Cache size: 64 KB
@@ -480,7 +480,7 @@ Average cache access cycles: 2.82812 cycles
 
 Configuration file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/confs/hitRate-blockSize-cacheSize/32B-dm-128KB-lru-50-wb-wa.txt
 Trace file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/traces/ls.trace
-Output file direction: 
+Output file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/results/simplifiedOutputFiles/blockSize-cacheSize.txt
 ===============================================
 ===================Cache Info==================
 Cache size: 128 KB
@@ -520,7 +520,7 @@ Average cache access cycles: 3.57072 cycles
 
 Configuration file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/confs/hitRate-blockSize-cacheSize/64B-dm-128KB-lru-50-wb-wa.txt
 Trace file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/traces/ls.trace
-Output file direction: 
+Output file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/results/simplifiedOutputFiles/blockSize-cacheSize.txt
 ===============================================
 ===================Cache Info==================
 Cache size: 128 KB
@@ -560,7 +560,7 @@ Average cache access cycles: 2.64232 cycles
 
 Configuration file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/confs/hitRate-blockSize-cacheSize/128B-dm-128KB-lru-50-wb-wa.txt
 Trace file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/traces/ls.trace
-Output file direction: 
+Output file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/results/simplifiedOutputFiles/blockSize-cacheSize.txt
 ===============================================
 ===================Cache Info==================
 Cache size: 128 KB
@@ -600,7 +600,7 @@ Average cache access cycles: 2.15353 cycles
 
 Configuration file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/confs/hitRate-blockSize-cacheSize/256B-dm-128KB-lru-50-wb-wa.txt
 Trace file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/traces/ls.trace
-Output file direction: 
+Output file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/results/simplifiedOutputFiles/blockSize-cacheSize.txt
 ===============================================
 ===================Cache Info==================
 Cache size: 128 KB
@@ -640,7 +640,7 @@ Average cache access cycles: 1.9831 cycles
 
 Configuration file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/confs/hitRate-blockSize-cacheSize/32B-dm-256KB-lru-50-wb-wa.txt
 Trace file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/traces/ls.trace
-Output file direction: 
+Output file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/results/simplifiedOutputFiles/blockSize-cacheSize.txt
 ===============================================
 ===================Cache Info==================
 Cache size: 256 KB
@@ -680,7 +680,7 @@ Average cache access cycles: 3.30461 cycles
 
 Configuration file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/confs/hitRate-blockSize-cacheSize/64B-dm-256KB-lru-50-wb-wa.txt
 Trace file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/traces/ls.trace
-Output file direction: 
+Output file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/results/simplifiedOutputFiles/blockSize-cacheSize.txt
 ===============================================
 ===================Cache Info==================
 Cache size: 256 KB
@@ -720,7 +720,7 @@ Average cache access cycles: 2.46471 cycles
 
 Configuration file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/confs/hitRate-blockSize-cacheSize/128B-dm-256KB-lru-50-wb-wa.txt
 Trace file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/traces/ls.trace
-Output file direction: 
+Output file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/results/simplifiedOutputFiles/blockSize-cacheSize.txt
 ===============================================
 ===================Cache Info==================
 Cache size: 256 KB
@@ -760,7 +760,7 @@ Average cache access cycles: 2.01485 cycles
 
 Configuration file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/confs/hitRate-blockSize-cacheSize/256B-dm-256KB-lru-50-wb-wa.txt
 Trace file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/traces/ls.trace
-Output file direction: 
+Output file direction: /Users/lianyunrui/Desktop/Study/College-Project/3_2/Computer-Architecture/Lab/Lab_4/project/results/simplifiedOutputFiles/blockSize-cacheSize.txt
 ===============================================
 ===================Cache Info==================
 Cache size: 256 KB

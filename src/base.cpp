@@ -196,7 +196,9 @@ void Analyzer::updateResult(const Cache &cache)
 
 void Analyzer::outputToFile(const string &outputFileDir) const
 {
-    ofstream outputFile(outputFileDir);
+    ofstream outputFile;
+    outputFile.open(outputFileDir, ios::app);
+
     if (!outputFile.is_open())
     {
         cout << "Error: Output file open failed!" << endl;
@@ -207,7 +209,9 @@ void Analyzer::outputToFile(const string &outputFileDir) const
     outputFile << "Load Hit Rate: " << d_read_rate * 100 << "%" << endl;
     outputFile << "Store Hit Rate: " << d_write_rate * 100 << "%" << endl;
     outputFile << "Total Run Time: " << i_total_cache_access_cycles << endl;
-    outputFile << "AVG MA Latency: " << fixed << setprecision(2) << d_ave_cache_access_cycles << endl;
+    outputFile << "AVG MA Latency: " << fixed << setprecision(2) << d_ave_cache_access_cycles << endl
+               << endl
+               << endl;
 
     outputFile.close();
 }
