@@ -1,5 +1,6 @@
 # Cache Simulator
-
+> This is a project of Computer Architecture, 2023 Spring, Fudan Univ.
+> Also a project of cse240a, UCSD.
 
 
 ## 项目概述
