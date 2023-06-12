@@ -114,7 +114,7 @@ formatted results with cache information have been written to ./results/associat
 │   ├── analyzerUtils.h		# 与 cache 行为测试、处理文件输出相关的所有类及函数声明
 │   └── cacheUtils.h			# 与 cache 参数配置、处理用户输入相关的所有类及函数声明，及所有的宏
 ├── results
-│   ├── formattedOutputFiles
+│   ├── simplifiedOutputFiles
 │   │   └── ...						# ./script/ 中脚本的简要运行结果（只含实验要求的五行输出）
 │   └── ...								# ./script/ 中脚本的详细运行结果（包括 cache 参数说明等信息）
 ├── scripts
