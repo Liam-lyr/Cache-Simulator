@@ -146,11 +146,11 @@ formatted results with cache information have been written to ./results/associat
 
   config file 按照如下形式编写，每项一行。
 
-  1. **块大小 block size：**以字节为单位的缓存块大小，即缓存行 (cache line) 中去除标记 tag、标志位 flags (valid + dirty)，该值应该是$2^k$。
-  2. **关联性：**指定缓存的关联性。值“1”表示直接映射缓存，而值“0”表示完全关联，其他值可以为2的非负幂次，代表$2^k$组相联。
-  3. **数据大小：**指定缓存中数据的总大小。这不包括任何开销 (tag、flags)，以KB为单位且值为$2^k$。
-  4. **替换政策：**指定要使用的替换策略。值“0”表示随机替换，值“1”表示LRU,其余值无效。注意若直接映射，则此项不起作用。
-  5. **写策略：**值“0”表示命中时写直达 (write through)、非命中时非写分配 (not write allocate)；值“1”表示命中时写回 (write back)、非命中时写分配 (write allocate)。
+  1. **块大小 block size：** 以字节为单位的缓存块大小，即缓存行 (cache line) 中去除标记 tag、标志位 flags (valid + dirty)，该值应该是$2^k$。
+  2. **关联性：** 指定缓存的关联性。值“1”表示直接映射缓存，而值“0”表示完全关联，其他值可以为2的非负幂次，代表$2^k$组相联。
+  3. **数据大小：** 指定缓存中数据的总大小。这不包括任何开销 (tag、flags)，以KB为单位且值为$2^k$。
+  4. **替换政策：** 指定要使用的替换策略。值“0”表示随机替换，值“1”表示LRU,其余值无效。注意若直接映射，则此项不起作用。
+  5. **写策略：** 值“0”表示命中时写直达 (write through)、非命中时非写分配 (not write allocate)；值“1”表示命中时写回 (write back)、非命中时写分配 (write allocate)。
 
 - **缓存行组织形式、地址组织形式**
 
@@ -245,7 +245,7 @@ analyzer.traceFileTest(cache, traceDir);
 - 写不命中
   - `i_num_cache_access++; i_num_cache_write++;`
   - 若 not write allocate，做 **`Analyzer.writeMem()`**（模拟写主存，实际就是 `i_num_mem_write++;`）
-  - 若 write allocate，做**`Analyzer.readMem()`**（模拟读主存，将主存数据加载进内存），设置 dirty_bit = 1（模拟命中的写）
+  - 若 write allocate，做 **`Analyzer.readMem()`**（模拟读主存，将主存数据加载进内存），设置 dirty_bit = 1（模拟命中的写）
 
 #### `Analyzer.readMem()`
 
@@ -291,7 +291,7 @@ sh scripts/blockSize-cacheSize.sh
 
 - **测试结果**
 
-  **测试控制其他条件为：**直接映射、write back + write allocate、LRU 替换策略。
+  **测试控制其他条件为：** 直接映射、write back + write allocate、LRU 替换策略。
 
   命中率表、折线图如下。
 
@@ -317,11 +317,11 @@ sh scripts/associativity.sh
 
 - **预期结果**
 
-  **命中率：**其他条件相同时，**缓存行关联度越高，命中率越高**。因为缓存行关联度越高，可供一内存块数据映射到的缓存位置增加，命中率升高。
+  其他条件相同时，**缓存行关联度越高，命中率越高**。因为缓存行关联度越高，可供一内存块数据映射到的缓存位置增加，命中率升高。
 
 - **测试结果**
 
-  **测试控制其他条件为：**cache 大小 128KB、块大小 32B、write back + write allocate、LRU 替换策略。
+  **测试控制其他条件为：** cache 大小 128KB、块大小 32B、write back + write allocate、LRU 替换策略。
 
   命中率表、折线图如下。
 
@@ -339,11 +339,13 @@ sh scripts/associativity.sh
 sh scripts/writePolicy.sh
 ```
 
-- **预期结果：**其他条件相同时，**Write Back + Write Allocate 策略的命中率高于 Write Through + Not Write Allocate**。因为写不命中时，Write Allocate 策略会将内存数据加载到缓存中，再进行命中的写，这能提高之后的对本地址附近区域数据的访问的命中次数。
+- **预期结果**
+
+  其他条件相同时，**Write Back + Write Allocate 策略的命中率高于 Write Through + Not Write Allocate**。因为写不命中时，Write Allocate 策略会将内存数据加载到缓存中，再进行命中的写，这能提高之后的对本地址附近区域数据的访问的命中次数。
 
 - **测试结果**
 
-  **测试控制其他条件为：**cache 大小 128KB、块大小 32B、直接映射、LRU 替换策略。
+  **测试控制其他条件为：** cache 大小 128KB、块大小 32B、直接映射、LRU 替换策略。
 
   命中率表、折线图如下。
 
@@ -363,11 +365,13 @@ sh scripts/writePolicy.sh
 sh scripts/replacePolicy.sh
 ```
 
-- **预期结果：**本实验仅做了 LRU 策略、随机替换策略的比较。其他条件相同时，**前者的命中率应高于后者**。因为前者能更好地利用局部性，后者很可能将最近频繁使用的数据块替换掉。**但由于随机替换策略的随机性，可能出现前者低于后者的情况**。
+- **预期结果**
+
+  本实验仅做了 LRU 策略、随机替换策略的比较。其他条件相同时，**前者的命中率应高于后者**。因为前者能更好地利用局部性，后者很可能将最近频繁使用的数据块替换掉。**但由于随机替换策略的随机性，可能出现前者低于后者的情况**。
 
 - **测试结果**
 
-  **测试控制其他条件为：**cache 大小 128KB、块大小 32B、4路组相联映射、write back + write allocate。
+  **测试控制其他条件为：** cache 大小 128KB、块大小 32B、4路组相联映射、write back + write allocate。
 
   命中率表、折线图如下。随机替换策略的命中率取10次测试平均值。
 
